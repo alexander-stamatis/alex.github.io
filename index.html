@@ -19,7 +19,7 @@
 
     <script>
         $(document).ready(function(){
-            var startingPage = "contact";
+            var startingPage = "home";
             $("#vertical-nav-bar ul li").each(function(index){
                 if($(this).html() == startingPage.toUpperCase()){
                     // $(this).css("color","#30BAC7");
@@ -256,12 +256,17 @@
                     <p>alex.k.stamatis@gmail.com</p>
                     <p>(916) 540 0751</p>
                     <p>&nbsp;</p>
-                    <form method="POST" action="https://formspree.io/alex.k.stamatis@gmail.com" id="contact-form">
+                    <!--<form method="POST" action="https://formspree.io/alex.k.stamatis@gmail.com" id="contact-form">
                         <input type="email" name="email" placeholder="Your email">
                         <p></p>
                         <textarea name="message" placeholder="Your message"></textarea>
                         <p></p>
                         <button type="submit">Send</button>
+                    </form>-->
+                    <form action="https://formspree.io/your@email.com" method="POST">
+                        <input type="text" name="name">
+                        <input type="email" name="_replyto">
+                        <input type="submit" value="Send">
                     </form>
                     <!--Apperantly git is static only and doesn't support back end stuff, php must be externally hosted-->
                     <!--<form name="contact-form" method="POST" action="contact.php">
