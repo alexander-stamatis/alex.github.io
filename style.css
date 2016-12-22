@@ -104,3 +104,27 @@ textarea{
     height:150px;
     width: 50%;
 }
+
+#contact-form button{
+    font-size: 18px;
+    background-color:#30BAC7;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    border-width: 0px;
+    border-color: #30BAC7;;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    opacity: 1.0;
+}
+
+#contact-form button:hover{
+    opacity: 0.8;
+}
+
+#contact-form input{
+    width: 370px;
+    height: 30px;
+    margin-bottom: 7px;
+}
