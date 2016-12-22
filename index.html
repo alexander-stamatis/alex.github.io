@@ -256,7 +256,14 @@
                     <p>alex.k.stamatis@gmail.com</p>
                     <p>(916) 540 0751</p>
                     <p>&nbsp;</p>
-                    <form name="contact-form" method="POST" action="contact.php">
+                    <form action="https://formspree.io/alex.k.stamatis@gmail.com"
+                        method="POST">
+                        <input type="text" name="name">
+                        <input type="email" name="_replyto">
+                        <input type="submit" value="Send">
+                    </form>
+                    <!--Apperantly git is static only and doesn't support back end stuff, php must be externally hosted-->
+                    <!--<form name="contact-form" method="POST" action="contact.php">
                         <p>Name</p>
                         <input type="text" name="name">
                         <p>Email</p>
@@ -265,7 +272,7 @@
                         <textarea type="text" name="message"></textarea>
                         <p>&nbsp;</p>
                         <input id="submit" name="submit" type="submit" value="Submit">
-                    </form>
+                    </form>-->
                 </div>
             </div>
         </div>
