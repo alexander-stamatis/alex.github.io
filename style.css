@@ -1,0 +1,106 @@
+/*COLOR PALETTE
+color: #AE2F69;
+color: #30BAC7;*/
+
+body{
+    font-family: Quicksand;
+    line-height: 1.6em;
+    font-size: 16px;
+}
+
+h1, h2, h3{
+    color: #30BAC7;
+}
+
+h2{
+    font-size: 24px;
+}
+
+a{
+    color: #AE2F69;
+    text-decoration:none;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+#container{
+    height: 100%;
+    width: 1000px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.content{
+    padding: 4%;
+    overflow: hidden;
+}
+
+#header{
+    width:100%;
+    overflow: hidden;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+#header-name-container{
+    font-size: 32px;
+}
+
+#position-title{
+    font-size: 18px;
+    color: grey;
+    padding-top: 5px;
+}
+
+#photo{
+    background-image: url('images/self-potrait.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 60px;
+    height: 60px;
+    float:left;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+#vertical-nav-bar{
+    cursor: pointer;
+    display: inline-flex;
+    height:100%;
+    float:left;
+    width: 15%;
+}
+
+#vertical-nav-bar li{
+    margin-bottom: 10px;
+}
+
+#vertical-nav-bar ul li:hover{
+    color: #AE2F69;
+}
+
+.content-data{
+    display: none;
+    float: right;
+    width: 80%;
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+    border-color: lightgrey;
+    padding-left: 4%;
+}
+
+#footer-contact-info{
+    
+   width: 50px;
+}
+
+#footer-contact-info li{
+    display: inline;
+}
+
+textarea{
+    height:150px;
+    width: 50%;
+}
