@@ -128,3 +128,37 @@ textarea{
     height: 30px;
     margin-bottom: 7px;
 }
+
+#footer{
+    padding-top: 4%;
+    float: right;
+    width: 85%;
+    color: grey;
+}
+
+.bio-bold{
+    font-weight: bold;
+}
+
+.progress-bar-container{
+    width: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+}
+
+.progress-bar{
+    width: 200px;
+    height: 10px;
+    background-color: #30BAC7;
+}
+
+.language-cells{
+    margin: 10px;
+    float: left;
+
+}
+
+#language-table{
+    float: right;
+}

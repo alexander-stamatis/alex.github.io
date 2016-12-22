@@ -47,6 +47,95 @@
                     $(tempString).show("slow");
                 }
             });
+
+            var intervalHandle;
+            var language_bar_max_width = 100;
+            var rate = 2;
+            var increment = 0.5;
+
+            // Percentages
+            var skill_c_sharp = 80;
+            var skill_javascript = 70;
+            var skill_html = 75;
+            var skill_php = 35;
+            var skill_c_plus = 50;
+
+            
+            var size = 0;
+            var languages = [
+                '75',
+                '65',
+                '85',
+                '35',
+                '50'
+            ]
+
+            var elements = [
+                'c-sharp-bar',
+                'javascript-bar',
+                'html-bar',
+                'php-bar',
+                'c-plus-bar'
+            ]
+
+            var sizes =
+            [
+                0,0,0,0,0
+            ]
+           
+            
+            $('li#bio').click(function(){
+                clearInterval(intervalHandle);
+                $(".progress-bar").css("width","0px");
+                console.log("clicked");
+                size=0;
+                
+                var toggle = true;
+
+                if(toggle){
+                    function animate(methodName){
+                    intervalHandle = setInterval(methodName,rate);  
+                }
+                    if(sizes[0] <= languages[0]){
+                        animate(function(){expand('c-sharp-bar', '0')});
+                    }
+                    if(sizes[1] <= languages[1]){
+                        animate(function(){expand('javascript-bar', '1')});
+                    }
+                    if(sizes[2] < languages[2]){
+                        animate(function(){expand('html-bar', '2')});
+                    }
+                    if(sizes[3] < languages[3]){
+                        animate(function(){expand('php-bar', '3')});
+                    }
+                    if(sizes[4] < languages[4]){
+                        animate(function(){expand('c-plus-bar', '4')});
+                    }
+                }            
+
+                function expand(hey, index){
+                    console.log(index);
+                    if(sizes[index]  != languages[index] * 2){
+                        sizes[index]  += increment;
+                        document.getElementById(hey).style.width = sizes[index] + "px";
+                    }else{
+                        //clearInterval(intervalHandle);
+                        //check();
+                    }
+                }    
+                
+                
+                setTimeout(function() { check(); }, 100);
+                
+
+                function check(){
+                    toggle = false;
+                    clearInterval(intervalHandle);
+                }
+
+            });
+
+            
         });
     </script>
 
@@ -70,8 +159,8 @@
                 </div>
                 <div class="content-data" id="content-home">
                     <p>Hello! My name is Alex and this is my web and software portofolio.</p>
-                    <p>I enjoy programming!</p>
-                    <p>&nbsp;</p>
+                    <p>I love technology and enjoy programming!</p>
+                    <p>Currently, I am searching for an entry level programming internship.</p>
                     <p>&nbsp;</p>
                 </div>
                 <div class="content-data" id="content-projects">
@@ -91,7 +180,7 @@
                     <img src="images/ninja_ramen_1.jpg" height="220px" width="400px">
                     <p>&nbsp;</p>
                     <p>Role: Programmer</p>
-                    <p>Description: A PC co-op party game developed on Unity 3D. This was a group project.</p>
+                    <p>Description: A PC co-op party game developed on Unity 3D. Tasked to work with several artists to create this project.</p>
                     <p>Download Link: <a href="https://www.dropbox.com/s/9lhsb2jppbl76h3/Ninja%20Ramen%20EXE.zip?dl=0">NinjaRamen.exe</a></p>
                     <p>&nbsp;</p>
 
@@ -105,150 +194,62 @@
                     <p>Download Link (Anroid): <a href="#">DefendTheWall.apk</a></p>
                     <p>Download Link (Media Web Player): <a href="https://www.dropbox.com/s/gr6h8ld5b8ig8vk/DefendTheWall_Web%20Player.zip?dl=0">DefendTheWall.apk</a></p>
                     <p style="color: grey;">Note: Media Web Player works best on Firefox Browser!</p>
-
+                    <p>&nbsp;</p>
+                    <p>Currently working and updating a personal project with Oculus VR on Unity 3D, an action game that features building mechanics, and an existing website for <a href="http://appness.org/">Appness.org</a></p>
                 </div>
                 <div class="content-data" id="content-resume">
                     <p><a href="https://www.dropbox.com/s/q2yxv43fi99ajej/Resume_Stamatis_Alexander.pdf?dl=0">Download Resume</a></p>
-                    <div class="content">
-                        <div class="content-row">
-                            <div class="content-right">
-                                <div class="content-container-right">
-                                    <h1>ALEXANDER STAMATIS</h1>
-                                    <p style="font-style: bold; color: darkgrey;">Programmer</p>
-                                    <p>&nbsp;</p><p>&nbsp;</p>
-                                    <!--<h4 style="color: grey">MAJOR COURSEWORK</h4>-->
-                                    <p>Self-starting, analytical, and creative developer seeking an entry level programming internship. My multi-faceted skills and work ethic will aid to improve and finish 
-                                        any software product.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="content-left">
-                                <div class="content-container-left">
-                                    <div id="contact" >
-                                        <h3>WEBSITE</h3>
-                                        <p><a href="http://astamatis.github.io/">astamatis@github.io</a></p>
-                                        <p>&nbsp;</p>
-                                        <h3>MOBILE</h3>
-                                        <p>(916) 540 0751</p>
-                                        <p>&nbsp;</p>
-                                        <h3>EMAIL</h3>
-                                        <p>alex.k.stamatis@gmail.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content-row">
-                            <h2 class="section-header" style="float:left;">EDUCATION</h2>
-                        </div>
-                        <div class="content-row">
-                            <div class="content-right">
-                                <div class="content-container-right">
-                                    <h4 style="color: grey">MAJOR COURSEWORK</h4>
-                                    <p>Video Game Development, Programming and Algorithms, Basic Web Design, Rich Internet Media Design, Scripting and Programming for Computer Graphics, 3D Modeling and Animation</p>
-                                    <!--<ul id="courses">
-                                        <li>Programming and Algorithms I</li>
-                                        <li>Scripting and Programming for Computer Graphics</li>
-                                        <li>Video Game Development</li>
-                                        <li>Basic Web Design</li>
-                                        <li>Rich Internet Media Design I</li>
-                                    </ul>-->                              
-                                    <p>&nbsp;</p>
-                                    <p style="color: darkgrey">Credits taken: 97 | Credits Remaining: 23</p> 
-                                </div>
-                            </div>
-                            <div class="content-left">
-                                <div class="content-container-left" id="school-info">
-                                    <h4>UNIVERSITY</h4>
-                                    <p>CSU CHICO</p>
-                                    <p style="font-size: 12px;">2012-2017</p>
-                                    <p>&nbsp;</p>
-                                    <h4>MAJOR</h4>
-                                    <p>Computer Animation and Game Development </p>
-                                    <!--<p style="font-size: 12px;">Major GPA: 3.6</p>-->
-                                </div>
-                            </div>
-                    </div>
-                    <div class="content-row">
-                            <h2 class="section-header" style="float:left;">SKILLS</h2>
-                        </div>
-                        <div class="content-row">
-                            <div class="content-right">
-                                <div class="content-container-right">
-                                    <p>C#, Javascript, HTML, CSS, JSON, JQuery</p>
-                                    <p>C++, AJAX, PHP, SQL</p>
-                                    <p>MonoDevelop, Visual Studio Code</p>
-                                </div>
-                            </div>
-                            <div class="content-left">
-                                <div class="content-container-left" id="skills-left">
-                                    <p>Proficient Languages:</p>
-                                    <p>Familiar Languages:</p>
-                                    <p>Development Environments:</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content-row">
-                            <h2 class="section-header" style="float:left;">PROJECTS</h2>
-                        </div>
-                        <div class="content-row">
-                            <div class="content-right">
-                                <div class="content-container-right">
-                                    <p>Assisted and managed team members. Virtual Reality game, <a href="https://cagd.itch.io/galactic-defenders">Galactic Defenders</a>, was published in Itch.io</p> 
-                                    <p>&nbsp;</p> 
-                                    <p>Created a mobile game application named <a href="https://cagd.itch.io/galactic-defenders">Defend The Wall.</a> Utilized Unity 3D, Blender, and Photoshop</p>
-                                    <p>&nbsp;</p> 
-                                    <p>Programmed a PC party game on Unity 3D, <a href="https://cagd.itch.io/galactic-defenders">Ninja Ramen</a></p>
-                                </div>
-                            </div>
-                            <div class="content-left">
-                                <div class="content-container-left" id="roles">
-                                    <p>Project Leader</p>
-                                    <p style="font-size: 12px;">Team Project</p>
-                                    <p>&nbsp;</p>
-                                    <p>Software Developer</p>
-                                    <p style="font-size: 12px;">Individual Project</p>
-                                    <p>&nbsp;</p> 
-                                    <p>Programmer</p>
-                                    <p style="font-size: 12px;">Team Project</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content-row">
-                            <h2 class="section-header" style="float:left;">WORK HISTORY</h2>
-                        </div>
-                        <div class="content-row">
-                            <div class="content-right">
-                                <div class="content-container-right">
-                                    <p>Worked in the bakery department and prepared specialty drinks at a bar</p>
-                                    <p>&nbsp;</p>
-                                    
-                                    <p>My positions included Usher, Box, Door, and Concessions</p>
-                                </div>
-                            </div>
-                            <div class="content-left">
-                                <div class="content-container-left" id="work-positions">
-                                    <p>WHOLE FOODS</p>
-                                    <p>Team Member</p>
-                                    <p style="font-size: 12px;">Oct 2015 – Jan 2016</p>
-                                    <p>&nbsp;</p>
-                                    <p>HARKING THEATERS</p>
-                                    <p>Team Member</p>
-                                    <p style="font-size: 12px;">Jul 2015 - Oct 2015</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="content-data" id="content-bio">
                     <h2>BIO</h2>
                     <img src="images/bio-potrait.jpg" height="225px" width="400px">
-                    <p>Age: 22</p>
-                    <p>Spoken Languages: English, Greek</p>
-                    
-                    <p>Technical Skills: Game and Web Development</p>
-                    <p>Other Skills: Audio Production and Digital Graphic Design</p>
+                    <p><span class="bio-bold">Age:</span> 22</p>
+                    <p><span class="bio-bold">Spoken Languages:</span> English, Greek</p>
+                    <p><span class="bio-bold">Technical Skills:</span> Game and Web Development</p>
+                    <p><span class="bio-bold">Hobbies:</span> Audio Production and Digital Graphic Design</p>
+                    <p><span class="bio-bold">Favorite Video Games:</span> Tom Clancy's Rainbow Six: Siege and Age of Empires</p>
                     <p>&nbsp;</p>
-                    
+                    <h2>Programming Languages</h2>
+                    <div id="language-table">"
+                        <div class="language-cells">
+                            <p>C#</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="c-sharp-bar"></div>
+                            </div>
+                            <p>Intermediate</p> 
+                        </div>
+                        <div class="language-cells">
+                            <p>Javascript</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="javascript-bar"></div>
+                            </div> 
+                            <p>Intermediate</p> 
+                        </div>
+                        <div class="language-cells">
+                            <p>HTML</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="html-bar"></div>
+                             </div> 
+                             <p>Profficient</p> 
+                        </div>
+                        <div class="language-cells">
+                            <p>PHP</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="php-bar"></div>
+                            </div> 
+                            <p>Novice</p> 
+                        </div>
+                        <div class="language-cells">
+                            <p>C++</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="c-plus-bar"></div>
+                            </div> 
+                            <p>Novice</p>
+                        </div>
+                    </div>
+                    <p>Familiar with more languages as well such as CSS and PHP, concepts like object pooling, singleton pattern, AJAX and JSON, and JS libraries like jQuery and GSAP.</p>
+                    <p>Knowledgable of basic to intermediate programming concepts. Able to retain some or most of syntaxes across all API in a short time.</p>
                 </div>
                 <div class="content-data" id="content-contact">
                     <h2>CONTACT</h2>
@@ -281,6 +282,9 @@
                         <p>&nbsp;</p>
                         <input id="submit" name="submit" type="submit" value="Submit">
                     </form>-->
+                </div>
+                <div id="footer">
+                    <p>@ 2016 Proudly created by Alex! | <a href="">Download Resume</a></p>
                 </div>
             </div>
         </div>
