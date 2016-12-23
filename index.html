@@ -50,89 +50,23 @@
 
             var intervalHandle;
             var language_bar_max_width = 100;
-            var rate = 2;
-            var increment = 0.5;
 
             // Percentages
-            var skill_c_sharp = 80;
-            var skill_javascript = 70;
+            var skill_c_sharp = 65;
+            var skill_javascript = 60;
             var skill_html = 75;
-            var skill_php = 35;
-            var skill_c_plus = 50;
+            var skill_php = 20;
+            var skill_c_plus = 40;
+            var delay_tween = 0.5;
+            var rate = 3;
 
-            
-            var size = 0;
-            var languages = [
-                '75',
-                '65',
-                '85',
-                '35',
-                '50'
-            ]
-
-            var elements = [
-                'c-sharp-bar',
-                'javascript-bar',
-                'html-bar',
-                'php-bar',
-                'c-plus-bar'
-            ]
-
-            var sizes =
-            [
-                0,0,0,0,0
-            ]
-           
-            
             $('li#bio').click(function(){
-                clearInterval(intervalHandle);
-                $(".progress-bar").css("width","0px");
-                console.log("clicked");
-                size=0;
-                
-                var toggle = true;
-
-                if(toggle){
-                    function animate(methodName){
-                    intervalHandle = setInterval(methodName,rate);  
-                }
-                    if(sizes[0] <= languages[0]){
-                        animate(function(){expand('c-sharp-bar', '0')});
-                    }
-                    if(sizes[1] <= languages[1]){
-                        animate(function(){expand('javascript-bar', '1')});
-                    }
-                    if(sizes[2] < languages[2]){
-                        animate(function(){expand('html-bar', '2')});
-                    }
-                    if(sizes[3] < languages[3]){
-                        animate(function(){expand('php-bar', '3')});
-                    }
-                    if(sizes[4] < languages[4]){
-                        animate(function(){expand('c-plus-bar', '4')});
-                    }
-                }            
-
-                function expand(hey, index){
-                    console.log(index);
-                    if(sizes[index]  != languages[index] * 2){
-                        sizes[index]  += increment;
-                        document.getElementById(hey).style.width = sizes[index] + "px";
-                    }else{
-                        //clearInterval(intervalHandle);
-                        //check();
-                    }
-                }    
-                
-                
-                setTimeout(function() { check(); }, 100);
-                
-
-                function check(){
-                    toggle = false;
-                    clearInterval(intervalHandle);
-                }
-
+                $('.progress-bar').css('width','0');
+                TweenLite.to($('#c-sharp-bar'), rate, {width: skill_c_sharp * 2, delay: delay_tween});
+                TweenLite.to($('#javascript-bar'), rate, {width: skill_javascript * 2, delay: delay_tween});
+                TweenLite.to($('#html-bar'), rate, {width: skill_html * 2, delay: delay_tween});
+                TweenLite.to($('#php-bar'), rate, {width: skill_php * 2, delay: delay_tween});
+                TweenLite.to($('#c-plus-bar'), rate, {width: skill_c_plus * 2, delay: delay_tween});
             });
 
             
@@ -151,6 +85,7 @@
                     <ul>
                         <li id="home">HOME</li>
                         <li id="projects">PROJECTS</li>
+                         <li id="art">DIGITAL ART</li>
                         <li id="resume">RESUME</li>
                         <li id="bio">BIO</li>
                         <li id="contact">CONTACT</li>
@@ -161,6 +96,8 @@
                     <p>Hello! My name is Alex and this is my web and software portofolio.</p>
                     <p>I love technology and enjoy programming!</p>
                     <p>Currently, I am searching for an entry level programming internship.</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
                     <p>&nbsp;</p>
                 </div>
                 <div class="content-data" id="content-projects">
@@ -200,6 +137,20 @@
                 <div class="content-data" id="content-resume">
                     <p><a href="https://www.dropbox.com/s/q2yxv43fi99ajej/Resume_Stamatis_Alexander.pdf?dl=0">Download Resume</a></p>
                     
+                </div>
+                <div class="content-data" id="content-art">
+                    <h2>Dark Elf</h2>
+                    <p>Display on the <a href=""> CSU Chico student work page</a> (Dark Elf)</p>
+                    <img src="images/dark-elf-face.jpg" width="500px" height="500px">
+                    <p>&nbsp;</p>
+                    <h2>LOGO</h2>
+                    <p>&nbsp;</p>
+                    <img src="images/logo.jpg" width="500px" height="500px">
+                    <p>&nbsp;</p>
+                    <h2>OCEAN LANDSCAPE</h2>
+                    <p>&nbsp;</p>
+                    <img src="images/adrift.png" width="500px" height="280px">
+
                 </div>
                 <div class="content-data" id="content-bio">
                     <h2>BIO</h2>
@@ -257,13 +208,6 @@
                     <p>alex.k.stamatis@gmail.com</p>
                     <p>(916) 540 0751</p>
                     <p>&nbsp;</p>
-                    <!--<form method="POST" action="https://formspree.io/alex.k.stamatis@gmail.com" id="contact-form">
-                        <input type="email" name="email" placeholder="Your email">
-                        <p></p>
-                        <textarea name="message" placeholder="Your message"></textarea>
-                        <p></p>
-                        <button type="submit">Send</button>
-                    </form>-->
                     <form method="POST" action="http://formspree.io/alex.k.stamatis@gmail.com" id="contact-form">
                         <input type="email" name="email" placeholder="Your email">
                         <br>
