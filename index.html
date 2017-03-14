@@ -15,25 +15,50 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
+    
+        
+
     </head>
 
     <script>
         $(document).ready(function(){
+
+             var menu_activated;
+            menu_activated = false;
+            $('#menu_icon').click(function(){
+                if(!menu_activated){
+                    this.src = "images/menu_x.png";
+                    $("#nav-bar-list").show("fast");
+                    menu_activated = true;
+                    
+                }else{
+                    this.src = "images/menu.png";
+                    $("#nav-bar-list").hide("fast");
+                    menu_activated = false;
+                }
+
+            });
+
             var startingPage = "home";
             $("#vertical-nav-bar ul li").each(function(index){
                 if($(this).html() == startingPage.toUpperCase()){
                     // $(this).css("color","#30BAC7");
                 }else{
-                    $(this).mouseover(function(){
-                        $(this).css("color","#AE2F69");
-                    });
-                    $(this).mouseout(function(){
-                        $(this).css("color","black");
-                    });
-                     $(this).click(function(){
-                    $(this).css("color","#30BAC7");
-                  
-                    });
+                    if(!menu_activated){
+                        $(this).mouseover(function(){
+                            if(!menu_activated){
+                                $(this).css("color","#AE2F69");
+                            }
+                        });
+                        $(this).mouseout(function(){
+                            if(!menu_activated){
+                                $(this).css("color","black");
+                            }
+                        });
+                        $(this).click(function(){
+                            $(this).css("color","#30BAC7");
+                        });
+                    }
                 }
             });
             
@@ -69,7 +94,13 @@
                 TweenLite.to($('#c-plus-bar'), rate, {width: skill_c_plus * 2, delay: delay_tween});
             });
 
-            
+            $('#vertical-nav-bar li').click(function(){
+                if(menu_activated){
+                    $('#menu_icon').attr('src', 'images/menu.png');
+                    $("#nav-bar-list").hide("fast");
+                    menu_activated = false;
+                }
+            });
         });
     </script>
 
@@ -81,11 +112,12 @@
                     <div id="header-name-container"><h1 >ALEXANDER STAMATIS</h1></div>
                     <p id="position-title">Programmer</p>
                 </div>
+                <img src="images/menu.png" height="40px" width="40px" id="menu_icon">                        <li></li>
                 <div id="vertical-nav-bar">
-                    <ul>
+                    <ul id="nav-bar-list">
                         <li id="home">HOME</li>
                         <li id="projects">PROJECTS</li>
-                         <li id="art">DIGITAL ART</li>
+                        <li id="art">DIGITAL ART</li>
                         <li id="resume">RESUME</li>
                         <li id="bio">BIO</li>
                         <li id="contact">CONTACT</li>
@@ -142,6 +174,17 @@
                     <h2>Dark Elf</h2>
                     <p>Display on the <a href=""> CSU Chico student work page</a> (Dark Elf)</p>
                     <img src="images/dark-elf-face.jpg" width="500px" height="500px">
+                    <p>&nbsp;</p>
+                    <h2>BLACKSMITH</h2>
+                    <p>&nbsp;</p>
+                    <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/7cbe284b3e9d4087b2473edd982cd089/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                        <a href="https://sketchfab.com/models/7cbe284b3e9d4087b2473edd982cd089?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Blacksmith</a>
+                        by <a href="https://sketchfab.com/alex.k.stamatis?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">alex.k.stamatis</a>
+                        on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                    </p>
+                    </div>
+                    <p>Created game assets for a 3D blacksmith scene utilizing Bledner, Maya, and Substance Painter 2.</p>
                     <p>&nbsp;</p>
                     <h2>LOGO</h2>
                     <p>&nbsp;</p>
