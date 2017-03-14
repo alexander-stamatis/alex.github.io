@@ -16,8 +16,11 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
-    
         
+        <!-- Fancybox -->
+        <link rel="stylesheet" type="text/css" href="jquery.fancybox.css">
+        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+	    <script src="jquery.fancybox.min.js"></script>
 
     </head>
 
@@ -102,11 +105,28 @@
                     menu_activated = false;
                 }
             });
+            
+            $(".all-images").click(function(){
+                $("#magic-box").show();
+                var image_location = $(this).attr("src");
+                $("#magic-box-image").attr({style: "content:url(" + image_location +")" });
+            });
+
+            $("#magic-box-exit").click(function(){
+                $(this).parent().hide();
+            });
+
         });
     </script>
 
     <body>
         <div id="container">
+            <div id="magic-box">
+                <div id="magic-box-exit"></div>
+                <div id="magic-box-image">
+                        <img src="images/logo.jpg">
+                    </div>
+            </div>
             <div class="content">
                 <div id="header">
                     <div id="photo"></div>
@@ -180,12 +200,14 @@
                     <p>&nbsp;</p>
                     <h2>BLACKSMITH</h2>
                     <p>&nbsp;</p>
-                    <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/7cbe284b3e9d4087b2473edd982cd089/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                        <a href="https://sketchfab.com/models/7cbe284b3e9d4087b2473edd982cd089?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Blacksmith</a>
-                        by <a href="https://sketchfab.com/alex.k.stamatis?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">alex.k.stamatis</a>
-                        on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-                    </p>
+                    <div id="sketchfab-container">
+                        <div class="sketchfab-embed-wrapper"><iframe id="iframe-blacksmith" src="https://sketchfab.com/models/7cbe284b3e9d4087b2473edd982cd089/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                            <a href="https://sketchfab.com/models/7cbe284b3e9d4087b2473edd982cd089?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Blacksmith</a>
+                            by <a href="https://sketchfab.com/alex.k.stamatis?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">alex.k.stamatis</a>
+                            on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                        </p>
+                        </div>
                     </div>
                     <p>Created game assets for a 3D blacksmith scene utilizing Bledner, Maya, and Substance Painter 2.</p>
                     <p>&nbsp;</p>
@@ -275,7 +297,6 @@
                 </div>
                 <div id="footer">
                     <p>@ 2016 Proudly created by Alex! | <a href="">Download Resume</a> | <a href="https://www.linkedin.com/in/alexander-stamatis-a5a1abaa?trk=nav_responsive_tab_profile_pic"><img src="images/linkedin.png" width="24px" height="24px" class="social-links"></a> <a href="https://github.com/astamatis"><img src="images/github.png" width="24px" height="24px" class="social-links"></a></p>
-
                 </div>
             </div>
         </div>
