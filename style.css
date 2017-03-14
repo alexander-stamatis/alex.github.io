@@ -92,6 +92,15 @@ color: #30BAC7;*/
     
 }
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 .image-container{
     width:100%;
 }
@@ -146,6 +155,7 @@ color: #30BAC7;*/
 #menu_icon{
     cursor: pointer;
 }
+
 
 
 body{
