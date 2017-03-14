@@ -30,6 +30,7 @@ color: #30BAC7;*/
         float: left !important;
         border-width: 1px 0px 0px 0px !important; 
         padding-left: 0 !important;
+        width: 100% !important;
     }
     
     #vertical-nav-bar li{
