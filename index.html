@@ -17,11 +17,7 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
         
-        <!-- Fancybox -->
-        <link rel="stylesheet" type="text/css" href="jquery.fancybox.css">
-        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-	    <script src="jquery.fancybox.min.js"></script>
-
+        
     </head>
 
     <script>
@@ -73,7 +69,7 @@
                     
                 } else{
                     $(".content-data").hide();
-                    $(tempString).show("slow");
+                    $(tempString).show("fast");
                 }
             });
 
@@ -81,11 +77,11 @@
             var language_bar_max_width = 100;
 
             // Percentages
-            var skill_c_sharp = 65;
+            var skill_c_sharp = 80;
             var skill_javascript = 60;
-            var skill_html = 75;
+            var skill_html = 55;
             var skill_php = 20;
-            var skill_c_plus = 40;
+            var skill_c_plus = 30;
             var delay_tween = 0.5;
             var rate = 3;
 
@@ -116,6 +112,44 @@
                 $(this).parent().hide();
             });
 
+            //CAROUSEL
+            function changeImage()
+            {
+                var img = document.getElementById("carousel-image");
+                img.src = images[x];
+                x++;
+
+                if(x >= images.length){
+                    x = 0;
+                } 
+
+                fadeImg(img, 100, true);
+                setTimeout("changeImage()", 1000);
+            }
+             
+             function fadeImg(el, val, fade){
+                if(fade === true){
+                    val--;
+                }else{
+                    val ++;
+                }
+
+                if(val > 0 && val < 100){
+                    el.style.opacity = val / 100;
+                    setTimeout(function(){fadeImg(el, val, fade);}, 10);
+                }
+            }
+
+            var images = [],
+            x = 0;
+
+            images[0] = "images/16_9_mobile_game.jpg";
+            images[1] = "images/16_9_dark_elf.jpg";
+            images[2] = "images/16_9_ninja_ramen.jpg";
+            setTimeout("changeImage()", 1000);
+            var img = document.getElementById("carousel-image");
+            img.src = images[1];
+            
         });
     </script>
 
@@ -133,7 +167,7 @@
                     <div id="header-name-container"><h1 >ALEXANDER STAMATIS</h1></div>
                     <p id="position-title">Programmer</p>
                 </div>
-                <img src="images/menu.png" height="40px" width="40px" id="menu_icon">                        <li></li>
+                    <img src="images/menu.png" height="40px" width="40px" id="menu_icon">         
                 <div id="vertical-nav-bar">
                     <ul id="nav-bar-list">
                         <li id="home">HOME</li>
@@ -147,10 +181,18 @@
                 </div>
                 <div class="content-data" id="content-home">
                     <p>Hello! My name is Alex and this is my web and software portofolio.</p>
-                    <p>I love technology and enjoy programming!</p>
                     <p>Currently, I am searching for an entry level programming internship.</p>
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
+
+                    <!-- CAROUSEL -->
+                    <div class="carousel-wrapper">
+                        <div class="carousel">
+                            <div class="carousel-img"><img src="" id="carousel-image"></div>
+                           
+                        </div>
+                    </div>
+                    
                     <p>&nbsp;</p>
                 </div>
                 <div class="content-data" id="content-projects">
@@ -227,16 +269,15 @@
                     <p><span class="bio-bold">Spoken Languages:</span> English, Greek</p>
                     <p><span class="bio-bold">Technical Skills:</span> Game and Web Development</p>
                     <p><span class="bio-bold">Hobbies:</span> Audio Production and Digital Graphic Design</p>
-                    <p><span class="bio-bold">Favorite Video Games:</span> Tom Clancy's Rainbow Six: Siege and Age of Empires</p>
                     <p>&nbsp;</p>
                     <h2>Programming Languages</h2>
-                    <div id="language-table">"
+                    <div id="language-table">
                         <div class="language-cells">
                             <p>C#</p>
                             <div class="progress-bar-container">
                                 <div class="progress-bar" id="c-sharp-bar"></div>
                             </div>
-                            <p>Intermediate</p> 
+                            <p>Profficient</p> 
                         </div>
                         <div class="language-cells">
                             <p>Javascript</p>
@@ -250,25 +291,10 @@
                             <div class="progress-bar-container">
                                 <div class="progress-bar" id="html-bar"></div>
                              </div> 
-                             <p>Profficient</p> 
-                        </div>
-                        <div class="language-cells">
-                            <p>PHP</p>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar" id="php-bar"></div>
-                            </div> 
-                            <p>Novice</p> 
-                        </div>
-                        <div class="language-cells">
-                            <p>C++</p>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar" id="c-plus-bar"></div>
-                            </div> 
-                            <p>Novice</p>
+                             <p>Intermediate</p> 
                         </div>
                     </div>
-                    <p>Familiar with more languages as well such as CSS and PHP, concepts like object pooling, singleton pattern, AJAX and JSON, and JS libraries like jQuery and GSAP.</p>
-                    <p>Knowledgable of basic to intermediate programming concepts. Able to retain some or most of syntaxes across all API in a short time.</p>
+                    <p>I am very familiar with Unity 3D API, but I can rapidly learn other API. On my free time, I like creating or recreating video games. I do involve myself with audio and digital production but mainly focus on software develop.</p>
                 </div>
                 <div class="content-data" id="content-contact">
                     <h2>CONTACT</h2>
@@ -300,5 +326,8 @@
                 </div>
             </div>
         </div>
+
+          
+         </script>
 	</body>
 </html>

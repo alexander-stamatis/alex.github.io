@@ -184,7 +184,7 @@ a:hover{
 
 #container{
     height: 100%;
-    width: 1000px;
+    width: 80%;
     background-color: white;
     margin: 0 auto;
 }
@@ -295,6 +295,8 @@ textarea{
 
 .bio-bold{
     font-weight: bold;
+    color: #333333;
+    font-style: italic;
 }
 
 .progress-bar-container{
@@ -318,4 +320,37 @@ textarea{
 
 #language-table{
     float: right;
+    width: 100%;
+}
+
+.carousel-wrapper{
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    position: relative;
+    background:rgba(0,0,0,0.75);
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.carousel-img{
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex; /* add */
+    justify-content: center; /* add to align horizontal */
+    align-items: center; /* add to align vertical */  
+}
+
+.carousel-img img{
+    
+    /*background: url(images/kf2.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;*/
+    width: 100%;
+
+  
 }
