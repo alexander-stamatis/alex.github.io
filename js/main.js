@@ -38,6 +38,7 @@ $(document).ready(function() {
     });
 
     var tempString = "";
+    var project_page_activated = false;
     $('#vertical-nav-bar ul li').click(function() {
         tempString = "#content-" + $(this).attr('id');
         if ($(tempString).is(":visible")) {
@@ -47,7 +48,8 @@ $(document).ready(function() {
             $(tempString).show("fast");
         }
         //PROJECTS PAGE
-        if (tempString == "#content-projects") {
+        if (tempString == "#content-projects" && !project_page_activated) {
+            project_page_activated = true;
             carousel('carousel-galactic-defenders', 'images/galactic_defenders_1.jpg', 'images/gd_2.png', 'images/gd_4.png');
             carousel('carousel-ninja-ramen', 'images/ninja_ramen_1.jpg', 'images/ninja_ramen_2.jpg', 'images/ninja_ramen_3.jpg');
             carousel('carousel-dw', 'images/defend_the_wall_2.jpg', 'images/defend_the_wall_1.jpg', 'images/example_code_1.png');
