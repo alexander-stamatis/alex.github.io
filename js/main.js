@@ -50,9 +50,9 @@ $(document).ready(function() {
         //PROJECTS PAGE
         if (tempString == "#content-projects" && !project_page_activated) {
             project_page_activated = true;
-            carousel('carousel-galactic-defenders', 'images/galactic_defenders_1.jpg', 'images/gd_2.png', 'images/gd_4.png');
-            carousel('carousel-ninja-ramen', 'images/ninja_ramen_1.jpg', 'images/ninja_ramen_2.jpg', 'images/ninja_ramen_3.jpg');
-            carousel('carousel-dw', 'images/defend_the_wall_2.jpg', 'images/defend_the_wall_1.jpg', 'images/example_code_1.png');
+            carousel('carousel-galactic-defenders',false, 'images/galactic_defenders_1.jpg', 'images/gd_2.png', 'images/gd_4.png');
+            carousel('carousel-ninja-ramen',false, 'images/ninja_ramen_1.jpg', 'images/ninja_ramen_2.jpg', 'images/ninja_ramen_3.jpg');
+            carousel('carousel-dw',false, 'images/defend_the_wall_2.jpg', 'images/defend_the_wall_1.jpg', 'images/example_code_1.png');
         }
     });
 
@@ -113,7 +113,7 @@ $(document).ready(function() {
     });
 
     //CAROUSEL
-    function carousel(target_element, image_1, image_2, image_3) {
+    function carousel(target_element, fade_enabled, image_1, image_2, image_3) {
         var img = document.getElementById(target_element);
         var images = [];
         var seconds = 10;
@@ -139,33 +139,40 @@ $(document).ready(function() {
 
         }
 
-        var adder = 0;
-        var timer = 0;
+        if(fade_enabled){
+            var adder = 0;
+            var timer = 0;
 
-        function Fade() {
-            timer++;
-            if (timer > delta_fade_out) {
-                adder -= .01;
-                img.style.opacity = adder;
-            } else {
-                if (img.style.opacity <= 1) {
-                    adder += .01;
+            function Fade() {
+                timer++;
+                if (timer > delta_fade_out) {
+                    adder -= .01;
                     img.style.opacity = adder;
+                } else {
+                    if (img.style.opacity <= 1) {
+                        adder += .01;
+                        img.style.opacity = adder;
+                    }
+                }
+                if (timer > delta_fade_out && img.style.opacity < .1) {
+                    console.debug(image_index);
+                    img.style.opacity = 0;
+                    adder = 0;
+                    timer = 0;
+                    ChangeImage();
                 }
             }
-            if (timer > delta_fade_out && img.style.opacity < .1) {
-                console.debug(image_index);
-                img.style.opacity = 0;
-                adder = 0;
-                timer = 0;
+            //repeat carousel
+            setInterval(function() {
+                Fade();
+            }, seconds);
+        } else{
+            img.style.opacity = 1;
+            setInterval(function() {
                 ChangeImage();
-            }
+            }, 5000);
         }
-        //repeat carousel
-        setInterval(function() {
-            Fade();
-        }, seconds);
     }
     //HOME PAGE
-    carousel('carousel-image', 'images/16_9_mobile_game.jpg', 'images/16_9_dark_elf.jpg', 'images/16_9_ninja_ramen.jpg');
+    carousel('carousel-image', true, 'images/16_9_mobile_game.jpg', 'images/16_9_dark_elf.jpg', 'images/16_9_ninja_ramen.jpg');
 });
