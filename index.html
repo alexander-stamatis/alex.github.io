@@ -114,39 +114,75 @@
             
 
             //CAROUSEL
-            var img = document.getElementById("carousel-image");
-            var images = [];
-            var seconds = 4;
-            seconds *= 1000;
-            var image_index = 0;
-            images[0] = "images/16_9_mobile_game.jpg";
-            images[1] = "images/16_9_dark_elf.jpg";
-            images[2] = "images/16_9_ninja_ramen.jpg";
-            img.src = images[0];
+            function carousel(target_element, image_1, image_2, image_3){
+                var img = document.getElementById(target_element);
+                var images = [];
+                var seconds = 10;
+                var image_index = 0;
+                var duration = 800;
+                var rate_of_fade = .10; //percentage
+                var delta_fade_in = (25/100)*duration;
+                var delta_fade_out = (75/100)*duration;
+                // images[0] = "images/16_9_mobile_game.jpg";
+                // images[1] = "images/16_9_dark_elf.jpg";
+                // images[2] = "images/16_9_ninja_ramen.jpg";
+                images[0] = image_1;
+                images[1] = image_2;
+                images[2] = image_3;
 
-            function changeImage()
-            {
-                fade();
-                
-                if(image_index<images.length){
+                img.src = images[0];
+                img.style.opacity = 0;
+
+                function ChangeImage()
+                {
+                    if(image_index<images.length - 1){
+                        image_index++;
+                    }
+                    else{
+                        image_index = 0;
+                    }
                     img.src = images[image_index];
-                    image_index++;
+                    
                 }
-                else{
-                    image_index = 0;
+                
+                var adder = 0;
+                var timer = 0;
+                function Fade(){
+                    timer++;
+                    if(timer > delta_fade_out){
+                            adder -= .01;
+                            img.style.opacity = adder;
+                    }else{
+                        if(img.style.opacity <= 1){
+                            adder += .01;
+                            img.style.opacity = adder;
+                        }
+                    }
+                    if(timer > delta_fade_out && img.style.opacity < .1){
+                        console.debug(image_index);
+                        img.style.opacity = 0;
+                        adder = 0;
+                        timer = 0;
+                        ChangeImage();
+                    }   
                 }
-            }
 
-            function fade(){
-                $(img).fadeToggle(1000);
-            }
-
-            //repeat carousel
-            setInterval(function(){
-                changeImage();
-            }, seconds);
+                //repeat carousel
+                setInterval(function(){
+                    Fade();
+                }, seconds);
             
-        });
+            }
+            //HOME PAGE
+            carousel('carousel-image','images/16_9_mobile_game.jpg', 'images/16_9_dark_elf.jpg', 'images/16_9_ninja_ramen.jpg');
+            
+            //PROJECTS PAGE
+            carousel('carousel-galactic-defenders','images/galactic_defenders_1.jpg', 'images/gd_2.png', 'images/gd_4.png');
+            carousel('carousel-ninja-ramen','images/ninja_ramen_1.jpg', 'images/ninja_ramen_2.jpg', 'images/ninja_ramen_3.jpg');
+            carousel('carousel-dw','images/defend_the_wall_2.PNG', 'images/defend_the_wall_1.PNG', 'images/example_code_1.png');
+
+    
+    });
     </script>
 
     <body>
@@ -168,7 +204,7 @@
                     <ul id="nav-bar-list">
                         <li id="home">HOME</li>
                         <li id="projects">PROJECTS</li>
-                        <li id="art">DIGITAL ART</li>
+                        <li id="art">SIDE HOBBIES</li>
                         <li id="resume">RESUME</li>
                         <li id="bio">BIO</li>
                         <li id="contact">CONTACT</li>
@@ -176,16 +212,12 @@
                     </ul>
                 </div>
                 <div class="content-data" id="content-home">
-                    <p>Hello! My name is Alex and this is my web and software portofolio.</p>
-                    <p>Currently, I am searching for an entry level programming internship.</p>
+                    <p>Hello! My name is Alex and this is my web and software portofolio. Currently, I am searching for an entry level programming internship.</p>
                     <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-
                     <!-- CAROUSEL -->
                     <div class="carousel-wrapper">
                         <div class="carousel">
-                            <div class="carousel-img"><img src="" id="carousel-image"></div>
-                           
+                            <div class="carousel-img"><a href="#"><img src="" id="carousel-image"></a></div>
                         </div>
                     </div>
                     
@@ -195,7 +227,15 @@
                     <h2>GALACTIC DEFENDERS</h2>
                     <p>&nbsp;</p>
                     <div class="image-container">
-                    <img src="images/galactic_defenders_1.jpg" width="50%" class="all-images">
+                        
+                    <!-- CAROUSEL -->
+                    <div class="carousel-wrapper">
+                        <div class="carousel">
+                            <div class="carousel-img"><a href="#"><img src="" id="carousel-galactic-defenders"></a></div>
+                        </div>
+                    </div>
+
+                    <!--<img src="images/galactic_defenders_1.jpg" width="50%" class="all-images">-->
                     </div>
                     <p>&nbsp;</p>
                     <p>Role: Project Leader</p>
@@ -207,7 +247,14 @@
 
                     <h2>NINJA RAMEN</h2>
                     <p>&nbsp;</p>
-                    <img src="images/ninja_ramen_1.jpg" class="all-images">
+                    
+                    <!-- CAROUSEL -->
+                    <div class="carousel-wrapper">
+                        <div class="carousel">
+                            <div class="carousel-img"><a href="#"><img src="" id="carousel-ninja-ramen"></a></div>
+                        </div>
+                    </div>
+
                     <p>&nbsp;</p>
                     <p>Role: Programmer</p>
                     <p>Description: A PC co-op party game developed on Unity 3D. Tasked to work with several artists to create this project.</p>
@@ -216,7 +263,14 @@
 
                     <h2>DEFEND THE WALL</h2>
                     <p>&nbsp;</p>
-                    <img src="images/defend_the_wall_2.jpg" class="all-images">
+                    
+                    <!-- CAROUSEL -->
+                    <div class="carousel-wrapper">
+                        <div class="carousel">
+                            <div class="carousel-img"><a href="#"><img src="" id="carousel-dw"></a></div>
+                        </div>
+                    </div>
+
                     <p>&nbsp;</p>
                     <p>Role: Software Developer</p>
                     <p>Description: This was an individual project and worked on all assets to create this mobile application. This was a strong learning experience where
@@ -232,11 +286,16 @@
                     <embed src="images/resume-alexander-stamatis.pdf" width="100%" height="500px" />
                 </div>
                 <div class="content-data" id="content-art">
-                    <h2>Dark Elf</h2>
-                    <p>Display on the <a href=""> CSU Chico student work page</a> (Dark Elf)</p>
+                    
+                    
+                    <h2>DIGITAL ART - Dark Elf</h2>
+                    <p>Showcased on the <a href=""> CSU Chico student work page</a> (Dark Elf).</p>
                     <img src="images/dark-elf-face.jpg" class="all-images">
                     <p>&nbsp;</p>
-                    <h2>BLACKSMITH</h2>
+                    
+                    
+                    <h2>3D MODELING - BLACKSMITH</h2>
+                    <p>Created game assets for a 3D blacksmith scene utilizing Bledner, Maya, and Substance Painter 2.</p>
                     <p>&nbsp;</p>
                     <div id="sketchfab-container">
                         <div class="sketchfab-embed-wrapper"><iframe id="iframe-blacksmith" src="https://sketchfab.com/models/7cbe284b3e9d4087b2473edd982cd089/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
@@ -247,15 +306,13 @@
                         </p>
                         </div>
                     </div>
-                    <p>Created game assets for a 3D blacksmith scene utilizing Bledner, Maya, and Substance Painter 2.</p>
+                    
                     <p>&nbsp;</p>
-                    <h2>LOGO</h2>
+                    <h2>AUDIO PRODUCTION</h2>
+                    <p>Basic knowldege of audio production and DSP.</p>
                     <p>&nbsp;</p>
-                    <img src="images/logo.jpg" class="all-images">
-                    <p>&nbsp;</p>
-                    <h2>OCEAN LANDSCAPE</h2>
-                    <p>&nbsp;</p>
-                    <img src="images/adrift.png" class="all-images">
+                    <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/192289403&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
 
                 </div>
                 <div class="content-data" id="content-bio">

@@ -274,6 +274,7 @@ textarea{
     cursor: pointer;
     padding: 10px;
     opacity: 1.0;
+    
 }
 
 #contact-form button:hover{
@@ -281,9 +282,16 @@ textarea{
 }
 
 #contact-form input{
-    width: 370px;
+    width: 100%;
+    max-width: 500px;
     height: 30px;
     margin-bottom: 7px;
+}
+
+#contact-form textarea{
+    width: 100%;
+    max-width: 500px;
+
 }
 
 #footer{
@@ -327,10 +335,10 @@ textarea{
     height: 0;
     padding-bottom: 56.25%; /* 16:9 */
     position: relative;
-    background:rgba(0,0,0,0.75);
+    background:rgba(0,0,0,1);
     overflow: hidden;
     cursor: pointer;
-
+    border-radius: 5px;
 }
 
 .carousel-img{
