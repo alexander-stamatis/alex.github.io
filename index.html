@@ -62,15 +62,17 @@
                 }
             });
             
+            var tempString = "";
             $("#content-"+ startingPage).show("slow");
             $('#vertical-nav-bar ul li').click(function(){
-                var tempString = "#content-" + $(this).attr('id');
+                tempString = "#content-" + $(this).attr('id');
                 if($(tempString).is(":visible")){
                     
                 } else{
                     $(".content-data").hide();
                     $(tempString).show("fast");
                 }
+                
             });
 
             var intervalHandle;
@@ -173,14 +175,14 @@
                 }, seconds);
             
             }
-            //HOME PAGE
-            carousel('carousel-image','images/16_9_mobile_game.jpg', 'images/16_9_dark_elf.jpg', 'images/16_9_ninja_ramen.jpg');
-            
-            //PROJECTS PAGE
-            carousel('carousel-galactic-defenders','images/galactic_defenders_1.jpg', 'images/gd_2.png', 'images/gd_4.png');
-            carousel('carousel-ninja-ramen','images/ninja_ramen_1.jpg', 'images/ninja_ramen_2.jpg', 'images/ninja_ramen_3.jpg');
-            carousel('carousel-dw','images/defend_the_wall_2.PNG', 'images/defend_the_wall_1.PNG', 'images/example_code_1.png');
+                //HOME PAGE
+                carousel('carousel-image','images/16_9_mobile_game.jpg', 'images/16_9_dark_elf.jpg', 'images/16_9_ninja_ramen.jpg');
 
+                //PROJECTS PAGE
+                carousel('carousel-galactic-defenders','images/galactic_defenders_1.jpg', 'images/gd_2.png', 'images/gd_4.png');
+                carousel('carousel-ninja-ramen','images/ninja_ramen_1.jpg', 'images/ninja_ramen_2.jpg', 'images/ninja_ramen_3.jpg');
+                carousel('carousel-dw','images/defend_the_wall_2.PNG', 'images/defend_the_wall_1.PNG', 'images/example_code_1.png');
+            
     
     });
     </script>
@@ -283,7 +285,7 @@
                 </div>
                 <div class="content-data" id="content-resume">
                     <p><a href="https://www.dropbox.com/s/q2yxv43fi99ajej/Resume_Stamatis_Alexander.pdf?dl=0">Download Resume</a></p>
-                    <embed src="images/resume-alexander-stamatis.pdf" width="100%" height="500px" />
+                    <img src="images/resume-alexander-stamatis-page-001.jpg" width="100%" heigt="auto">
                 </div>
                 <div class="content-data" id="content-art">
                     
@@ -347,7 +349,7 @@
                              <p>Intermediate</p> 
                         </div>
                     </div>
-                    <p>I am very familiar with Unity 3D API, but I can rapidly learn other API. On my free time, I like creating or recreating video games. I do involve myself with audio and digital production but mainly focus on software develop.</p>
+                    <p>I am very familiar with Unity 3D API, but I can rapidly learn other API. On my free time, I like creating or recreating video games. I do involve myself with audio and digital production but mainly focus on software development.</p>
                 </div>
                 <div class="content-data" id="content-contact">
                     <h2>CONTACT</h2>

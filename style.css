@@ -338,7 +338,8 @@ textarea{
     background:rgba(0,0,0,1);
     overflow: hidden;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
+    border-color: grey;
 }
 
 .carousel-img{
@@ -351,6 +352,7 @@ textarea{
     display: flex; /* add */
     justify-content: center; /* add to align horizontal */
     align-items: center; /* add to align vertical */  
+    
 }
 
 .carousel-img img{
@@ -358,7 +360,7 @@ textarea{
     /*background: url(images/kf2.jpg) no-repeat;
     background-position: center center;
     background-size: cover;*/
-    width: 100%;
+    width: 101%;
 
   
 }
