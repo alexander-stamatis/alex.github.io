@@ -19,7 +19,7 @@ $(document).ready(function(){
             var startingPage = "home";
             $("#vertical-nav-bar ul li").each(function(index){
                 if($(this).html() == startingPage.toUpperCase()){
-                    // $(this).css("color","#30BAC7");
+                    
                 }else{
                     if(!menu_activated){
                         $(this).mouseover(function(){
@@ -40,7 +40,6 @@ $(document).ready(function(){
             });
             
             var tempString = "";
-            $("#content-"+ startingPage).show("slow");
             $('#vertical-nav-bar ul li').click(function(){
                 tempString = "#content-" + $(this).attr('id');
                 if($(tempString).is(":visible")){

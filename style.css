@@ -6,24 +6,6 @@ color: #30BAC7;*/
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 400;
-    src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://fonts.gstatic.com/s/quicksand/v6/NUrn2XQrRfyGZp5MknntaYX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-    unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-
-@font-face {
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://fonts.gstatic.com/s/quicksand/v6/s2PXW4WrV3VLrOUpHiqsfYX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-
-@font-face {
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 400;
     src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://fonts.gstatic.com/s/quicksand/v6/sKd0EMYPAh5PYCRKSryvW5Bw1xU1rKptJj_0jans920.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
@@ -106,8 +88,8 @@ color: #30BAC7;*/
         color: cyan !important;
     }
 }
-html,
-body {
+
+html, body {
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -115,63 +97,13 @@ body {
     overflow-x: hidden;
     font-family: 'Quicksand';
 }
-.image-container {
-    width: 100%;
-}
-.all-images {
-    width: 80%;
-    cursor: pointer;
-}
-#magic-box {
-    position: fixed;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    display: none;
-}
-#magic-box-image {
-    /*background:rgba(0,0,0,1);
-width: 80%;
-height: 80%;
-margin: auto;
-position: relative;
-top: 0; bottom: 0; left: 0; right: 0;*/
-    
-    margin: 0 auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80%;
-    border-color: black;
-}
-#magic-box-image img {
-    margin: 0 auto;
-    position: relative;
-    width: 50%;
-    border-width: 3px;
-}
-#magic-box-exit {
-    content: url(images/white_x.png);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-#menu_icon {
-    cursor: pointer;
-}
 body {
     line-height: 1.6em;
     font-size: 16px;
     list-style: none;
 }
-h1,
-h2,
-h3 {
+
+h1, h2, h3 {
     color: #30BAC7;
 }
 h2 {
@@ -184,52 +116,51 @@ a {
 a:hover {
     font-weight: bold;
 }
+.all-images {
+    width: 80%;
+    cursor: pointer;
+}
+.bio-bold {
+    font-weight: bold;
+    color: #333333;
+    font-style: italic;
+}
+/*Custom carousel tool*/
+.carousel-wrapper {
+    height: 0;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    position: relative;
+    background: rgba(0, 0, 0, 1);
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: grey;
+}
+.carousel-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-img img {
+    width: 101%;
+}
+
 #container {
     height: 100%;
     width: 80%;
+    max-width: 1000px;
     background-color: white;
     margin: 0 auto;
 }
 .content {
     padding: 4%;
     overflow: hidden;
-}
-#header {
-    width: 100%;
-    overflow: hidden;
-    padding-bottom: 5%;
-    padding-top: 5%;
-}
-#header-name-container {
-    font-size: 32px;
-}
-#position-title {
-    font-size: 18px;
-    color: grey;
-    padding-top: 5px;
-}
-#photo {
-    background-image: url('images/self-potrait.jpg');
-    background-size: cover;
-    background-position: center center;
-    width: 60px;
-    height: 60px;
-    float: left;
-    border-radius: 100px;
-    margin-right: 10px;
-}
-#vertical-nav-bar {
-    display: inline-flex;
-    height: 100%;
-    float: left;
-    width: 15%;
-}
-#vertical-nav-bar li {
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-#vertical-nav-bar ul li:hover {
-    color: #AE2F69;
 }
 .content-data {
     display: none;
@@ -240,16 +171,12 @@ a:hover {
     border-color: lightgrey;
     padding-left: 4%;
 }
-#footer-contact-info {
-    width: 50px;
+/*Display home page by default instead of using JS (slower) to show it*/
+#content-home{
+    display: block;
 }
-#footer-contact-info li {
-    display: inline;
-}
-textarea {
-    height: 150px;
-    width: 50%;
-}
+
+/*Contact form styling*/
 #contact-form button {
     font-size: 18px;
     background-color: #30BAC7;
@@ -277,17 +204,98 @@ textarea {
     width: 100%;
     max-width: 500px;
 }
+
+/*Footer styling*/
+#footer-contact-info {
+    width: 50px;
+}
+#footer-contact-info li {
+    display: inline;
+}
 #footer {
     padding-top: 4%;
     float: right;
     width: 85%;
     color: grey;
 }
-.bio-bold {
-    font-weight: bold;
-    color: #333333;
-    font-style: italic;
+#header {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 5%;
+    padding-top: 5%;
 }
+#header-name-container {
+    font-size: 32px;
+}
+.image-container {
+    width: 100%;
+}
+
+/*BIO Page - language tables*/
+.language-cells {
+    margin: 10px;
+    float: left;
+}
+#language-table {
+    float: right;
+    width: 100%;
+}
+
+/*Custom image enlarge tool*/
+#magic-box {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+}
+#magic-box-image {
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80%;
+    border-color: black;
+}
+#magic-box-image img {
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+    border-width: 3px;
+}
+#magic-box-exit {
+    content: url(images/white_x.png);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#menu_icon {
+    cursor: pointer;
+}
+
+#position-title {
+    font-size: 18px;
+    color: grey;
+    padding-top: 5px;
+}
+#photo {
+    background-image: url('images/self-potrait.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 60px;
+    height: 60px;
+    float: left;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+/*BIO Page - progress bars*/
 .progress-bar-container {
     width: 200px;
     border-style: solid;
@@ -299,45 +307,17 @@ textarea {
     height: 10px;
     background-color: #30BAC7;
 }
-.language-cells {
-    margin: 10px;
+
+#vertical-nav-bar {
+    display: inline-flex;
+    height: 100%;
     float: left;
+    width: 15%;
 }
-#language-table {
-    float: right;
-    width: 100%;
-}
-.carousel-wrapper {
-    height: 0;
-    padding-bottom: 56.25%;
-    /* 16:9 */
-    
-    position: relative;
-    background: rgba(0, 0, 0, 1);
-    overflow: hidden;
+#vertical-nav-bar li {
+    margin-bottom: 10px;
     cursor: pointer;
-    border-radius: 10px;
-    border-color: grey;
 }
-.carousel-img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    /* add */
-    
-    justify-content: center;
-    /* add to align horizontal */
-    
-    align-items: center;
-    /* add to align vertical */
-}
-.carousel-img img {
-    /*background: url(images/kf2.jpg) no-repeat;
-background-position: center center;
-background-size: cover;*/
-    
-    width: 101%;
+#vertical-nav-bar ul li:hover {
+    color: #AE2F69;
 }

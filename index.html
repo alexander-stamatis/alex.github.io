@@ -5,9 +5,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Alexander Stamatis</title>
-		<link href="reset.css" rel="stylesheet" type="text/css">
-        <link href="style.css" rel="stylesheet" type="text/css">
-		
+        <!--Original CSS-->
+		<!--<link href="reset.css" rel="stylesheet" type="text/css">-->
+        <!--<link href="style.css" rel="stylesheet" type="text/css">-->
+        <!--Minified CSS-->
+        <link href="reset-minified.css" rel="stylesheet" type="text/css">
+        <link href="styles-minified.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div id="container">
@@ -186,17 +189,6 @@
                         <br>
                         <button type="submit">Send</button>
                     </form>
-                    <!--Apperantly git is static only and doesn't support back end stuff, php must be externally hosted-->
-                    <!--<form name="contact-form" method="POST" action="contact.php">
-                        <p>Name</p>
-                        <input type="text" name="name">
-                        <p>Email</p>
-                        <input type="text" name="email">
-                        <p>Message</p>
-                        <textarea type="text" name="message"></textarea>
-                        <p>&nbsp;</p>
-                        <input id="submit" name="submit" type="submit" value="Submit">
-                    </form>-->
                 </div>
                 <div id="footer">
                     <p>@ 2016 Proudly created by Alex! | <a href="">Download Resume</a> | <a href="https://www.linkedin.com/in/alexander-stamatis-a5a1abaa?trk=nav_responsive_tab_profile_pic"><img src="images/linkedin.png" width="24px" height="24px" class="social-links"></a> <a href="https://github.com/astamatis"><img src="images/github.png" width="24px" height="24px" class="social-links"></a></p>
@@ -206,8 +198,9 @@
         <!--JQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<!--CDN link for  TweenMax-->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js" defer="defer"></script>
         <!--Custom JS-->
         <script src="js/main.js" type="text/javascript" defer="defer"></script>
+
 	</body>
 </html>
