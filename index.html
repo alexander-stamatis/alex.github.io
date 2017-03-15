@@ -111,44 +111,40 @@
             $("#magic-box-exit").click(function(){
                 $(this).parent().hide();
             });
+            
 
             //CAROUSEL
-            function changeImage()
-            {
-                var img = document.getElementById("carousel-image");
-                img.src = images[x];
-                x++;
-
-                if(x >= images.length){
-                    x = 0;
-                } 
-
-                fadeImg(img, 100, true);
-                setTimeout("changeImage()", 1000);
-            }
-             
-             function fadeImg(el, val, fade){
-                if(fade === true){
-                    val--;
-                }else{
-                    val ++;
-                }
-
-                if(val > 0 && val < 100){
-                    el.style.opacity = val / 100;
-                    setTimeout(function(){fadeImg(el, val, fade);}, 10);
-                }
-            }
-
-            var images = [],
-            x = 0;
-
+            var img = document.getElementById("carousel-image");
+            var images = [];
+            var seconds = 4;
+            seconds *= 1000;
+            var image_index = 0;
             images[0] = "images/16_9_mobile_game.jpg";
             images[1] = "images/16_9_dark_elf.jpg";
             images[2] = "images/16_9_ninja_ramen.jpg";
-            setTimeout("changeImage()", 1000);
-            var img = document.getElementById("carousel-image");
-            img.src = images[1];
+            img.src = images[0];
+
+            function changeImage()
+            {
+                fade();
+                
+                if(image_index<images.length){
+                    img.src = images[image_index];
+                    image_index++;
+                }
+                else{
+                    image_index = 0;
+                }
+            }
+
+            function fade(){
+                $(img).fadeToggle(1000);
+            }
+
+            //repeat carousel
+            setInterval(function(){
+                changeImage();
+            }, seconds);
             
         });
     </script>
