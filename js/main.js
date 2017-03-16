@@ -175,4 +175,26 @@ $(document).ready(function() {
     }
     //HOME PAGE
     carousel('carousel-image', true, 'images/16_9_mobile_game.jpg', 'images/16_9_dark_elf.jpg', 'images/16_9_ninja_ramen.jpg');
+    
+    
+    document.getElementById("sketchfab-container").style.display = 'none';
+    document.getElementById("img-blacksmith").addEventListener("click",loadBlacksmith);
+    document.getElementById("img-blacksmith").style.opacity = 1;
+    function loadBlacksmith(){
+        document.getElementById("img-blacksmith").style.display = 'none';
+        document.getElementById("sketchfab-container").style.display = 'block';
+        document.getElementById("iframe-blacksmith").src = "https://sketchfab.com/models/7cbe284b3e9d4087b2473edd982cd089/embed";
+    }
+
+    document.getElementById("soundcloud-container").style.display = 'none';
+    document.getElementById("soundcloud-link").addEventListener("click", loadSoundcloud);
+    document.getElementById("soundcloud-link").style.cursor = 'pointer';
+    function loadSoundcloud(){
+        document.getElementById("soundcloud-link").style.display = 'none';
+        document.getElementById("soundcloud-container").style.display = 'block';
+        document.getElementById("soundcloud-iframe").src = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/192289403&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false';
+    }
+
+
+
 });
