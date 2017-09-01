@@ -50,9 +50,9 @@ $(document).ready(function() {
         //PROJECTS PAGE
         if (tempString == "#content-projects" && !project_page_activated) {
             project_page_activated = true;
-            carousel('carousel-galactic-defenders',false, 'images/galactic_defenders_1.jpg', 'images/gd_2.png', 'images/gd_4.png');
-            carousel('carousel-ninja-ramen',false, 'images/ninja_ramen_1.jpg', 'images/ninja_ramen_2.jpg', 'images/ninja_ramen_3.jpg');
-            carousel('carousel-dw',false, 'images/defend_the_wall_2.jpg', 'images/defend_the_wall_1.jpg', 'images/example_code_1.png');
+			carousel('carousel-zombie-thing',false, 'images/zombie-thing-main-menu.jpg', 'images/zombie-thing-armory.jpg', 'images/zombie-thing-shipyard.jpg');
+            carousel('carousel-galactic-defenders',false, 'images/gd_4.png', 'images/gd_2.png', );
+
         }
     });
 
@@ -64,7 +64,7 @@ $(document).ready(function() {
     var skill_javascript = 60;
     var skill_html = 55;
     var skill_php = 20;
-    var skill_c_plus = 30;
+    var skill_c_plus = 60;
     var delay_tween = 0.5;
     var rate = 3;
 
@@ -174,7 +174,7 @@ $(document).ready(function() {
         }
     }
     //HOME PAGE
-    carousel('carousel-image', true, 'images/16_9_mobile_game.jpg', 'images/16_9_dark_elf.jpg', 'images/16_9_ninja_ramen.jpg');
+    carousel('carousel-image', true, 'images/zombie-thing-shipyard.jpg', 'images/16_9_dark_elf.jpg', 'images/gd_4.jpg');
     
     
     document.getElementById("sketchfab-container").style.display = 'none';
