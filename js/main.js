@@ -50,7 +50,7 @@ $(document).ready(function() {
         //PROJECTS PAGE
         if (tempString == "#content-projects" && !project_page_activated) {
             project_page_activated = true;
-			carousel('carousel-zombie-thing',false, 'images/zombie-thing-main-menu.jpg', 'images/zombie-thing-armory.jpg', 'images/zombie-thing-shipyard.jpg');
+			carousel('carousel-zombie-thing',false, 'images/zombie-thing-menu.jpg', 'images/zombie-thing-armory.jpg', 'images/zombie-thing-shipyard.jpg');
             carousel('carousel-galactic-defenders',false, 'images/gd_4.png', 'images/gd_2.png', 'images/gd_3.png' );
 
         }
