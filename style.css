@@ -320,9 +320,11 @@ a:hover {
 	border-width: 1px;
 	border-color: #D3D3D3;
 	padding: 5px;
-	border-radius: 5px;
+	border-radius: 10px;
 	text-align: center;
     font-size: 16px;
+	
+	box-shadow: 2px 2px 1px #D3D3D3;
 
 }
 /* #tech-list li:hover{
