@@ -11,17 +11,17 @@ color: #30BAC7;*/
 }
 @media screen and (min-width: 546px) {
     /*if more than */
-    
+
     #nav-bar-list {
         display: block !important;
     }
-    #menu_icon {
+    #menu-icon {
         display: none;
     }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 925px) {
     /*if less than 750px*/
-    
+
     #vertical-nav-bar li {
         float: left;
     }
@@ -259,6 +259,7 @@ a:hover {
     background: rgba(0, 0, 0, 0.75);
     display: none;
 }
+
 #magic-box-image {
     margin: 0 auto;
     top: 0;
@@ -281,7 +282,7 @@ a:hover {
     cursor: pointer;
 }
 
-#menu_icon {
+#menu-icon {
     cursor: pointer;
 }
 
@@ -323,7 +324,7 @@ a:hover {
 	border-radius: 10px;
 	text-align: center;
     font-size: 16px;
-	
+
 	box-shadow: 2px 2px 1px #D3D3D3;
 
 }
