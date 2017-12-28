@@ -1,5 +1,6 @@
 var menuActivated = false;
 var imageFolder = "images/";
+var imageMenuIconContracted = imageFolder + "menu-icon-contracted.png";
 var carouselFadeEnabled = true;
 var carouselImageDuration = 600;
 var carouselTickRate = 10;
@@ -16,7 +17,7 @@ $(document).ready(function() {
       $("#nav-bar-list").show("fast");
       menuActivated = true;
     } else {
-      this.src = imageFolder + "menu-icon-contracted.png";
+      this.src = imageMenuIconContracted;
       $("#nav-bar-list").hide("fast");
       menuActivated = false;
     }
@@ -47,7 +48,7 @@ $(document).ready(function() {
   $("#vertical-nav-bar li").click(function() {
 
     if (menuActivated) {
-      $("#menu-icon").attr("src", imageFolder + "menu.png");
+      $("#menu-icon").attr("src", imageMenuIconContracted);
       $("#nav-bar-list").hide("fast");
       menuActivated = false;
     }
@@ -109,18 +110,6 @@ $(document).ready(function() {
   function NextImage(index, images) {
     index.item = index.item < images.length - 1 ? ++index.item : 0;
     return images[index.item];
-  }
-
-  //Load sketchfab plugin
-  document.getElementById("sketchfab-container").style.display = "none";
-  document.getElementById("img-blacksmith").addEventListener("click", LoadSketchfabPlugin);
-  document.getElementById("img-blacksmith").style.opacity = 1;
-
-  //Load external sketchfab plugin
-  function LoadSketchfabPlugin() {
-    document.getElementById("img-blacksmith").style.display = "none";
-    document.getElementById("sketchfab-container").style.display = "block";
-    document.getElementById("iframe-blacksmith").src = "https://sketchfab.com/models/6e7f2a177287411ebd8920c0087406b7/embed";
   }
 
   $(".all-images").click(function() {
