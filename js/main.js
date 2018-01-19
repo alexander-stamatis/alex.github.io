@@ -4,7 +4,7 @@ var carouselImageDuration = 600;
 var carouselTickRate = 10;
 var carouselNoFadeImageDuration = 5000;
 var carouselOpacityCatalystRate = 0.01;
-var resumeLink = "https://drive.google.com/open?id=1NQZ-bIqQANbjilaW1EN8XDfTbgm8DbDz";
+var resumeLink = "https://drive.google.com/open?id=1gsN9ra1N2oJRT_R4IpMlm5aFyJgtPHvC";
 
 $(document).ready(function() {
 
