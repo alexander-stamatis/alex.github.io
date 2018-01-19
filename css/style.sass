@@ -6,6 +6,9 @@
 #menu-icon
   display: none
 
+a[href^="tel:"]:before
+  color: $magenta
+
 body
   font-family: 'NTR', sans-serif
   font-size: 20px
@@ -144,6 +147,9 @@ body
 .menu-icon
   display: none
   float: right
+  opacity: .4
+  &:hover
+    opacity: .8
   @media screen and (min-width: $md)
     display: none !important
 
@@ -301,6 +307,12 @@ body
     background: darkgrey
   img
     height: 50px
+
+#zombie-thing-gif
+  display: block
+  margin: 0 auto
+  width: 100%
+  max-width: 600px
 
 .color-blue
   color: $blue

@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link href="css/reset-minified.css" rel="stylesheet" type="text/css">
-  <link href="css/base.css" rel="stylesheet" type="text/css">
-  <link href="css/animate.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=NTR" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/reset-minified.css">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <!--https://daneden.github.io/animate.css/-->
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=NTR">
   <title>Alexander Stamatis</title>
 </head>
 
@@ -22,7 +23,6 @@
     <div id="header">
       <div class="content">
         <div id="header-name-container">
-          <!-- <img src="images/self-potrait.jpg"> -->
           <h1>ALEXANDER STAMATIS</h1>
           <p>Software Developer</p>
         </div>
@@ -65,13 +65,7 @@
       <div class="content">
         <h2 class="animated fadeInDown">ZOMBIE THING</h2>
         <p>&nbsp;</p>
-        <!-- CAROUSEL -->
-        <!-- <div class="carousel-wrapper">
-          <div class="carousel">
-            <div class="carousel-img"><a href="#"><img src="" id="carousel-zombie-thing"></a></div>
-          </div>
-        </div> -->
-        <img src="images/zombiething.gif" style="display: block; margin: 0 auto; width: 100%; max-width: 600px">
+        <img src="images/zombiething.gif" id="zombie-thing-gif">
         <p>&nbsp;</p>
         <div id="google-play-store"><a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en"><img src="images/googleplay-medium.png"></a></div>
         <p>&nbsp;</p>
@@ -79,7 +73,6 @@
         <p class="animated fadeInUp">Deployed on <a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en">Google Play Store</a>. An android mobile application developed in Unity, where the player can kill zombies, earn money, purchase new weapons,
           and repair barriers. Utilized C#, and implemented Google Play Services and Google AdMob API. Created 3D assets in Blender and Substance Painter 2. </p>
         <p>&nbsp;</p>
-
       </div>
     </div>
 
@@ -91,7 +84,7 @@
 
         </div>
         <div class="row">
-          <h2 class="animated bounce" style="margin-bottom: 20px">HI</h2>
+          <h2 class="animated bounce">HI</h2>
           <p id="about-summary" class="animated fadeInLeft">I'm Alex, a software developer who works on web and game applications. I'm currently learning Bootstrap and React frameworks. I am also working on a space shooter game. Outside of computers, I love to travel, jam on the guitar, and play tabletop
             games with friends!
           </p>
@@ -123,11 +116,6 @@
           </div>
         </div>
         <p>&nbsp;</p>
-        <!-- <h2>Graphical Production</h2>
-        <p>&nbsp;</p>
-        <p><span class="bio-bold">Created with Photoshop - "Dark Elf"</span></p>
-        <p>Showcased on the <a href="http://www.csuchico.edu/cagd/student_work/visual_concepts_and_design/index.shtml"> CSU Chico student work page</a> (Dark Elf).</p>
-        <img src="images/dark-elf-face.jpg" class="all-images"> -->
       </div>
     </div>
 
@@ -153,16 +141,13 @@
     </div>
 
     <!--FOOTER-->
-
-
     <div id="footer">
       <div class="content">
-        <!-- <a href="">Download Resume</a> | -->
         <ul id="footer-site-info">
           <li>
             <h2>About this site</h2></li>
           <li>
-            <p>This site was created to showcase my software development abilities. The site was built using HTML, JS, CSS (SASS)</p>
+            <p>This site was created to showcase my software development abilities. The site was built using HTML, JS, CSS (SASS).</p>
           </li>
           <li>@ 2018 Alexander Stamatis </li>
           <li>
@@ -182,15 +167,10 @@
       </div>
     </div>
 
-    <!-- <div id="footer-resume">
-        <div class="content">
-           <a href="https://drive.google.com/open?id=1NQZ-bIqQANbjilaW1EN8XDfTbgm8DbDz">Download Resume</a>
-        </div>
-      </div> -->
-
   </div>
   <!--JQuery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!--JS functionality for mobile navigation, carousel, and animate.css class implementation-->
   <script src="js/main.js" type="text/javascript" defer="defer"></script>
 </body>
 

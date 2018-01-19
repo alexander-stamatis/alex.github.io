@@ -4,6 +4,9 @@
 #menu-icon {
   display: none; }
 
+a[href^="tel:"]:before {
+  color: #d33682; }
+
 body {
   font-family: "NTR", sans-serif;
   font-size: 20px;
@@ -143,7 +146,10 @@ body {
 
 .menu-icon {
   display: none;
-  float: right; }
+  float: right;
+  opacity: 0.4; }
+  .menu-icon:hover {
+    opacity: 0.8; }
   @media screen and (min-width: 930px) {
     .menu-icon {
       display: none !important; } }
@@ -298,6 +304,12 @@ body {
     background: darkgrey; }
   #google-play-store img {
     height: 50px; }
+
+#zombie-thing-gif {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px; }
 
 .color-blue {
   color: #268bd2; }
