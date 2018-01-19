@@ -1,0 +1,311 @@
+#magic-box {
+  height: 0; }
+
+#menu-icon {
+  display: none; }
+
+body {
+  font-family: "NTR", sans-serif;
+  font-size: 20px;
+  background: #e5e5e5;
+  color: #e5e5e5; }
+
+.content {
+  margin: 0 auto; }
+  @media screen and (min-width: 1000px) {
+    .content {
+      width: 1000px; } }
+  @media screen and (max-width: 1000px) {
+    .content {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+.content-data {
+  display: none;
+  padding-top: 10px;
+  background: #191919; }
+  .content-data h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    float: left;
+    width: 100%; }
+
+#content-home {
+  display: block;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  #content-home p {
+    padding-top: 10px;
+    text-align: center; }
+  #content-home h2 {
+    text-align: center; }
+
+#content-projects h3 {
+  color: #fbbe5b;
+  font-size: 24px; }
+#content-projects a {
+  color: #268bd2;
+  text-decoration: none; }
+  #content-projects a:hover {
+    color: #3ACFEF; }
+
+#header {
+  background-color: #191919;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #e5e5e5;
+  height: 50px; }
+
+#header-name-container {
+  display: block;
+  float: left;
+  min-width: 250px; }
+  #header-name-container h1 {
+    padding-top: 4px;
+    font-size: 24px; }
+  #header-name-container p {
+    padding-top: 4px;
+    color: #8F8F8E; }
+  #header-name-container img {
+    width: 50px;
+    border-radius: 50px;
+    display: inline-block;
+    float: left;
+    margin-right: 15px; }
+
+@media screen and (max-width: 930px) {
+  #nav-bar {
+    display: none; } }
+@media screen and (min-width: 930px) {
+  #nav-bar {
+    display: block !important;
+    float: right; } }
+#nav-bar li {
+  float: left;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  padding: 4px 4px;
+  font-size: 20px;
+  color: #7c7a7a; }
+  @media screen and (max-width: 930px) {
+    #nav-bar li {
+      width: 100%;
+      text-align: center;
+      float: left;
+      background-color: #8F8F8E;
+      color: white;
+      padding: 10px 10px;
+      padding-right: 30px; }
+      #nav-bar li:hover {
+        background-color: #fbbe5b;
+        color: #191919; } }
+#nav-bar ul {
+  padding-top: 30px; }
+  @media screen and (max-width: 930px) {
+    #nav-bar ul {
+      display: block;
+      width: 100%;
+      margin-left: -20px; } }
+#nav-bar li:hover {
+  color: white;
+  border-bottom: 1px solid #fbbe5b; }
+
+@media screen and (max-width: 930px) {
+  #content-contact {
+    width: 100%;
+    margin: 0; } }
+#content-contact .content {
+  display: block;
+  text-align: center; }
+#content-contact form {
+  width: 300px;
+  display: inline-block;
+  text-align: center; }
+#content-contact input {
+  height: 20px;
+  font-size: 16px; }
+#content-contact textarea {
+  margin-top: 5px;
+  width: 100%;
+  width: 300px;
+  height: 150px;
+  font-size: 16px; }
+#content-contact button {
+  border-radius: 5px;
+  border-width: 0px;
+  font-size: 24px;
+  color: white;
+  background: #268bd2;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.menu-icon {
+  display: none;
+  float: right; }
+  @media screen and (min-width: 930px) {
+    .menu-icon {
+      display: none !important; } }
+
+@media screen and (max-width: 930px) {
+  #menu-icon-contracted {
+    display: block; } }
+
+@media screen and (min-width: 930px) {
+  #nav-bar-mobile {
+    display: none !important; } }
+
+#tech-list ul {
+  max-width: 400px;
+  margin: 0 auto; }
+#tech-list li {
+  display: inline-block;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  color: #191919;
+  background-color: #e5e5e5;
+  text-align: center; }
+#tech-list li:hover {
+  background: #d33682;
+  color: white; }
+
+#about-summary {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto; }
+
+.row {
+  padding-bottom: 60px;
+  padding-top: 50px;
+  border-top: 1px solid;
+  border-color: #8F8F8E; }
+
+#about-selfie {
+  background-image: url("../images/mexico-potrait-2.jpg");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+  margin-bottom: -10px; }
+
+.carousel {
+  width: 600px;
+  height: 300px;
+  border: 1px solid white;
+  margin: 0 auto; }
+  @media screen and (max-width: 930px) {
+    .carousel {
+      width: 99%; } }
+
+.carousel-img {
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  width: 100%; }
+
+#footer {
+  font-weight: bold;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  bottom: 0;
+  color: #191919; }
+  #footer p {
+    font-weight: bold;
+    text-align: center; }
+  #footer ul {
+    display: block;
+    width: 40%;
+    overflow: hidden; }
+    @media screen and (max-width: 930px) {
+      #footer ul {
+        width: 100%; } }
+  #footer li {
+    min-width: 200px;
+    padding-top: 14px;
+    display: flex;
+    align-items: center;
+    width: 100%; }
+
+#footer-contact-info {
+  float: left; }
+
+#footer-site-info {
+  float: right; }
+  #footer-site-info h2 {
+    font-size: 20px;
+    border-bottom: 2px solid; }
+  #footer-site-info p {
+    font-style: italic;
+    text-align: left;
+    color: #8F8F8E;
+    background: white;
+    border-radius: 4px;
+    padding: 10px; }
+
+#social-links img {
+  margin-left: 0px;
+  margin-right: 5px; }
+
+.social-link-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #191919; }
+  .social-link-img:hover {
+    background: #fbbe5b; }
+
+.footer-images {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #191919;
+  margin-right: 10px; }
+
+#resume {
+  background-color: #191919;
+  width: 100%;
+  float: left; }
+  #resume a {
+    visibility: hidden;
+    display: inline-block;
+    float: right;
+    background: #fbbe5b;
+    color: #191919;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    cursor: pointer; }
+    #resume a:hover {
+      background: #8F8F8E;
+      color: white; }
+
+.intro-home {
+  visibility: hidden;
+  float: left;
+  width: 100%; }
+
+#google-play-store {
+  background: grey;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer; }
+  #google-play-store:hover {
+    background: darkgrey; }
+  #google-play-store img {
+    height: 50px; }
+
+.color-blue {
+  color: #268bd2; }
+
+.color-magenta {
+  color: #d33682; }
+
+.color-orange {
+  color: #fbbe5b; }
+
+/*# sourceMappingURL=base.css.map */

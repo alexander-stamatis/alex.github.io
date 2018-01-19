@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="css/reset-minified.css" rel="stylesheet" type="text/css">
+  <link href="css/base.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../css/animate.css">
+  <link href="https://fonts.googleapis.com/css?family=NTR" rel="stylesheet">
   <title>Alexander Stamatis</title>
-  <link href="reset-minified.css" rel="stylesheet" type="text/css">
-  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -17,243 +19,178 @@
         <img src="">
       </div>
     </div>
-    <div class="content">
-      <div id="header">
-        <div id="photo"></div>
+    <div id="header">
+      <div class="content">
         <div id="header-name-container">
-          <h1>ALEXANDER STAMATIS</h1></div>
-        <p id="position-title">Programmer</p>
+          <!-- <img src="images/self-potrait.jpg"> -->
+          <h1>ALEXANDER STAMATIS</h1>
+          <p>Software Developer</p>
+        </div>
+        <img src="images/menu-icon-expanded.png" class="menu-icon" height="40px" width="40px" id="menu-icon-expanded">
+        <img src="images/menu-icon-contracted.png" class="menu-icon" height="40px" width="40px" id="menu-icon-contracted">
+        <div id="nav-bar">
+          <ul>
+            <li id="home">HOME</li>
+            <li id="projects">PROJECTS</li>
+            <li id="bio">ABOUT</li>
+            <li id="contact">CONTACT</li>
+          </ul>
+        </div>
+        <div id="resume">
+          <a href="" class="resume-links">RESUME</a>
+        </div>
       </div>
-      <img src="images/menu-icon-contracted.png" height="40px" width="40px" id="menu-icon">
-      <div id="vertical-nav-bar">
-        <ul id="nav-bar-list">
-          <li id="home">HOME</li>
-          <li id="projects">PROJECTS</li>
-          <li id="employment">EMPLOYMENT</li>
-          <li id="bio">ABOUT ME</li>
-          <!--<li id="art">SIDE HOBBIES</li>-->
-          <li id="resume">RESUME</li>
-          <li id="contact">CONTACT</li>
-          <p style="height: 100%"> </p>
-        </ul>
-      </div>
+    </div>
 
-      <!--HOME PAGE-->
-      <div class="content-data" id="content-home">
-        <p>Hello! My name is Alex, and this is my software portfolio.</p>
+    <!--HOME PAGE-->
+    <div class="content-data" id="content-home">
+      <div class="content">
+        <h2 class="intro-home">Hi! My name is <span class="color-blue">Alex</span>,</h2>
+        <p class="intro-home">and this is my <span class="color-orange">software portfolio</span>.</p>
         <p>&nbsp;</p>
+
         <!-- CAROUSEL -->
-        <div class="carousel-wrapper">
-          <div class="carousel">
-            <div class="carousel-img"><a href="#"><img src="" id="carousel-image"></a></div>
+        <div class="carousel">
+          <div class="carousel-wrapper">
+            <div class="carousel-img" id="carousel-home-img"></div>
           </div>
         </div>
+
         <p>&nbsp;</p>
       </div>
+    </div>
 
-      <!--PROJECTS PAGE-->
-      <div class="content-data" id="content-projects">
-
-        <h2>ZOMBIE THING</h2>
+    <!--PROJECTS PAGE-->
+    <div class="content-data" id="content-projects">
+      <div class="content">
+        <h2 class="animated fadeInDown">ZOMBIE THING</h2>
         <p>&nbsp;</p>
-
         <!-- CAROUSEL -->
-        <div class="carousel-wrapper">
+        <!-- <div class="carousel-wrapper">
           <div class="carousel">
             <div class="carousel-img"><a href="#"><img src="" id="carousel-zombie-thing"></a></div>
           </div>
+        </div> -->
+        <img src="../images/zombiething.gif" style="display: block; margin: 0 auto; width: 100%; max-width: 600px">
+        <p>&nbsp;</p>
+        <div id="google-play-store"><a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en"><img src="../images/googleplay-medium.png"></a></div>
+        <p>&nbsp;</p>
+        <h3 class="animated fadeInUp">Summary</h3>
+        <p class="animated fadeInUp">Deployed on <a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en">Google Play Store</a>. An android mobile application developed in Unity, where the player can kill zombies, earn money, purchase new weapons,
+          and repair barriers. Utilized C#, and implemented Google Play Services and Google AdMob API. Created 3D assets in Blender and Substance Painter 2. </p>
+        <p>&nbsp;</p>
+
+      </div>
+    </div>
+
+    <!--BIO PAGE-->
+    <div class="content-data" id="content-bio">
+      <div class="content">
+        <img class="all-images" id="about-selfie">
+        <div class="line">
+
         </div>
-
-        <p>&nbsp;</p>
-        <p>Deployed on Google Play Store. An android mobile application developed in Unity, where the player can kill zombies, earn money, purchase new weapons, and repair barriers. Utilized C#, and implemented Google Play Services and Google AdMob API.
-          Created 3D assets in Blender and Substance Painter 2. </p>
-        <p>Link to .apk file (latest version): <a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en">Google Play Store</a></p>
-        <p>Link to .exe file (older version): <a href="https://appness.itch.io/zombie-thing">Itch.io</a></p>
-        <p>&nbsp;</p>
-
-        <h2>GALACTIC DEFENDERS</h2>
-        <p>&nbsp;</p>
-
-        <div class="image-container">
-          <div class="carousel-wrapper">
-            <div class="carousel">
-              <div class="carousel-img"><a href="#"><img src="" id="carousel-galactic-defenders"></a></div>
-            </div>
+        <div class="row">
+          <h2 class="animated bounce" style="margin-bottom: 20px">HI</h2>
+          <p id="about-summary" class="animated fadeInLeft">I'm Alex, a software developer who works on web and game applications. I'm currently learning Bootstrap and React frameworks. I am also working on a space shooter game. Outside of computers, I love to travel, jam on the guitar, and play tabletop
+            games with friends!
+          </p>
+        </div>
+        <div class="row">
+          <h2>Technologies</h2>
+          <p>&nbsp;</p>
+          <div id="tech-list">
+            <ul>
+              <li class="animated fadeInDown">c#</li>
+              <li class="animated fadeInLeft">c++</li>
+              <li class="animated fadeInRight">javascript</li>
+              <li class="animated fadeInUp">jQuery</li>
+              <li class="animated fadeInDown">html5</li>
+              <li class="animated fadeInLeft">css3</li>
+              <li class="animated fadeInRight">sass</li>
+              <li class="animated fadeInUp">atom</li>
+              <li class="animated fadeInDown">visual studio</li>
+              <li class="animated fadeInLeft">unity 3D</li>
+              <li class="animated fadeInRight">windows</li>
+              <li class="animated fadeInUp">linux</li>
+              <li class="animated fadeInDown">osx</li>
+              <li class="animated fadeInLeft">bash</li>
+              <li class="animated fadeInRight">cmd</li>
+              <li class="animated fadeInUp">git</li>
+              <li class="animated fadeInDown">github</li>
+              <li class="animated fadeInLeft">bitbucket</li>
+            </ul>
           </div>
         </div>
-
         <p>&nbsp;</p>
-        <p>Role: Project Leader</p>
-        <P>My role was to manage and assist team members with their tasks.</P>
-        <p>Game Description: A virtual reality game developed on HTC Vive and published on Itch.io</p>
-        <p>Download Link: <a href="https://cagd.itch.io/galactic-defenders">GalacticDefenders.exe</a></p>
-        <p>&nbsp;</p>
-
-      </div>
-
-      <div class="content-data" id="content-resume">
-        <p><a href="https://drive.google.com/open?id=1NQZ-bIqQANbjilaW1EN8XDfTbgm8DbDz">Download Resume</a></p>
-        <img src="images/resume-alexander-stamatis.jpg" width="100%" heigt="auto">
-      </div>
-
-
-      <!--EMPLOYEMENT-->
-      <div class="content-data" id="content-employment">
-        <h2>Theia Interactive</h2>
-        <p>&nbsp;</p>
-        <img src="images/theia-banner.png" class="all-images">
-        <p>&nbsp;</p>
-        <a href="http://theia.io/">Link to their website!</a>
-        <p>&nbsp;</p>
-        <p><span class="bio-bold">Job Responsibilities</span></p>
-        <p>As a programming intern, it was my responsibility to learn the Unreal Engine 4 (UE4) workflow. I was also tasked to understand and develop their C++ code, and fix bugs. Our team used Github to address issues, version control, assign tasks, and
-          create pull requests to merge code. </p>
-        <p>&nbsp;</p>
-        <p><span class="bio-bold">What I Learned</span></p>
-        <p>With Unreal Engine 4, I learned C++ and fundamental programming concepts such as implementing hash tables, utilizing structs and pointers, and understanding memory management. In addition to C++, I learned my first network protocol, which was
-          remote procedural calls (RPC). My team leader and peers often reviewed and suggested improvements to my code. It wasn't difficult to configure HTC Vive or Oculus Rift, as I had past development experience in both virtual reality systems.</p>
-
-      </div>
-
-
-      <!--SIDE HOBBIES PAGE-->
-      <div class="content-data" id="content-art">
-
-        <h2>DIGITAL ART - Dark Elf</h2>
-        <p>Showcased on the <a href=""> CSU Chico student work page</a> (Dark Elf).</p>
-        <img src="images/dark-elf-face.jpg" class="all-images">
-        <p>&nbsp;</p>
-
-        <h2>3D MODELING - BLACKSMITH</h2>
-        <p>Created game assets for a 3D blacksmith scene utilizing Blender, Maya, and Substance Painter 2. Feel free to check out the model in 3D by clicking on the image below. May run slow on mobile or tablet devices.</p>
-        <p>&nbsp;</p>
-
-        <!--SKETFAB-->
-        <!--DNS lookup if clicked on an image to activate it, same with soundcloud-->
-        <img id="img-blacksmith" src="images/sketchfab-load.jpg" style="cursor: pointer;">
-
-        <div id="sketchfab-container">
-          <div class="sketchfab-embed-wrapper"><iframe id="iframe-blacksmith" src='' frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-              <a href="https://sketchfab.com/models/7cbe284b3e9d4087b2473edd982cd089?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Blacksmith</a> by <a href="https://sketchfab.com/alex.k.stamatis?utm_medium=embed&utm_source=website&utm_campain=share-popup"
-                target="_blank" style="font-weight: bold; color: #1CAAD9;">alex.k.stamatis</a> on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-            </p>
-          </div>
-        </div>
-
-        <p>&nbsp;</p>
-        <h2>AUDIO PRODUCTION</h2>
-        <p>Basic knowldege of audio production and DSP.</p>
-        <p>&nbsp;</p>
-        <img id="soundcloud-link" src="images/soundcloud-load.jpg" style="cursor: pointer;">
-        <div id="soundcloud-container"><iframe id="soundcloud-iframe" width="100%" height="166" scrolling="no" frameborder="no" src=""></iframe></div>
-      </div>
-
-      <!--BIO PAGE-->
-      <div class="content-data" id="content-bio">
-        <h2>ABOUT ME</h2>
-        <p>&nbsp;</p>
-        <img src="images/mexico-potrait.jpg" class="all-images">
-        <p><span class="bio-bold">Age:</span> 23 <span style="color: grey"> (Born May 3, 1994)</span></p>
-        <p><span class="bio-bold">Spoken Languages:</span> English, Greek</p>
-        <p>&nbsp;</p>
-
-        <h2>Summary</h2>
-        <p>&nbsp;</p>
-        <p>Alexander Stamatis is a software developer that works on video games and occasionally on front-end development. A Bachelor of Science in Computer Animation and Game Development has introduced a variety of knowledge in 3D modeling, GPU computing,
-          and game scripting. As of now, he is focusing on reinforcing data structures and algorithms concepts to enhance and create maintainable code for his current and upcoming mobile applications. </p>
-        <p>&nbsp;</p>
-        <h2>Tech & Tools</h2>
-        <p>&nbsp;</p>
-        <div id="tech-list">
-          <ul>
-            <li>c#</li>
-            <li>c++</li>
-            <li>javascript</li>
-            <li>html</li>
-            <li>css</li>
-            <li>visual studio</li>
-            <li>unity 3D</li>
-            <li>windows</li>
-            <li>linux</li>
-            <li>osx</li>
-            <li>bash</li>
-            <li>cmd</li>
-            <li>git</li>
-            <li>github</li>
-            <li>bitbucket</li>
-          </ul>
-        </div>
-        <!-- <div id="language-table">
-                        <div class="language-cells">
-                            <p>C#</p>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar" id="c-sharp-bar"></div>
-                            </div>
-                            <p>Proficient</p>
-                        </div>
-                        <div class="language-cells">
-                            <p>Javascript</p>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar" id="javascript-bar"></div>
-                            </div>
-                            <p>Intermediate</p>
-                        </div>
-                        <div class="language-cells">
-                            <p>HTML</p>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar" id="html-bar"></div>
-                             </div>
-                             <p>Intermediate</p>
-                        </div>
-                        <div class="language-cells">
-                            <p>C++</p>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar" id="c-plus-bar"></div>
-                             </div>
-                             <p>Intermediate</p>
-                        </div>
-                    </div> -->
-        <p>&nbsp;</p>
-        <h2>Graphical Production</h2>
+        <!-- <h2>Graphical Production</h2>
         <p>&nbsp;</p>
         <p><span class="bio-bold">Created with Photoshop - "Dark Elf"</span></p>
         <p>Showcased on the <a href="http://www.csuchico.edu/cagd/student_work/visual_concepts_and_design/index.shtml"> CSU Chico student work page</a> (Dark Elf).</p>
-        <img src="images/dark-elf-face.jpg" class="all-images">
-
+        <img src="images/dark-elf-face.jpg" class="all-images"> -->
       </div>
+    </div>
 
-      <!--CONTACT PAGE-->
-      <div class="content-data" id="content-contact">
-        <h2>CONTACT</h2>
+    <!--CONTACT PAGE-->
+    <div class="content-data" id="content-contact">
+      <div class="content">
+        <h2 class="animated fadeInDown">CONTACT</h2>
         <p>&nbsp;</p>
-        <p>alex.k.stamatis@gmail.com</p>
-        <p>(916) 540 0751</p>
+        <p class="animated fadeInDown">Feel free to contact at me at any time for any information</p>
+        <p>&nbsp;</p>
+        <p class="animated fadeInDown">Email: alex.k.stamatis@gmail.com</p>
+        <p class="animated fadeInDown">Mobile: +1 (916) 540 0751</p>
         <p>&nbsp;</p>
         <form method="POST" action="http://formspree.io/alex.k.stamatis@gmail.com" id="contact-form">
           <input type="email" name="email" placeholder="Your email">
           <br>
           <textarea name="message" placeholder="Your message"></textarea>
           <br>
-          <button type="submit">Send</button>
+          <button type="submit" class="animated fadeInUp">send</button>
         </form>
         <p>&nbsp;</p>
       </div>
-
-      <!--FOOTER-->
-      <div id="footer">
-        <p>@ 2016 Alexander Stamatis | <a href="https://drive.google.com/open?id=1NQZ-bIqQANbjilaW1EN8XDfTbgm8DbDz">Download Resume</a> | <a href="https://www.linkedin.com/in/alexander-stamatis-a5a1abaa?trk=nav_responsive_tab_profile_pic"><img src="images/linkedin.png" width="24px" height="24px" class="social-links"></a>          <a href="https://github.com/astamatis"><img src="images/github.png" width="24px" height="24px" class="social-links"></a></p>
-      </div>
-
     </div>
+
+    <!--FOOTER-->
+
+
+    <div id="footer">
+      <div class="content">
+        <!-- <a href="">Download Resume</a> | -->
+        <ul id="footer-site-info">
+          <li>
+            <h2>About this site</h2></li>
+          <li>
+            <p>This site was created to showcase my software development abilities. The site was built using HTML, JS, CSS (SASS)</p>
+          </li>
+          <li>@ 2018 Alexander Stamatis </li>
+          <li>
+            <div id="social-links">
+              <a href="https://www.linkedin.com/in/alexanderstamatis/"><img src="images/linkedin.png" class="social-link-img"></a>
+              <a href="https://github.com/astamatis"><img src="images/github.png" class="social-link-img"></a>
+            </div>
+          </li>
+        </ul>
+
+        <ul id="footer-contact-info">
+          <li><img src="images/icon-location.png" class="footer-images">Sacramento, CA, United States</li>
+          <li><img src="images/icon-email.png" class="footer-images">alex.k.stamatis@gmail.com</li>
+          <li><img src="images/icon-mobile.png" class="footer-images">+1 916 540 0751</li>
+        </ul>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+
+    <!-- <div id="footer-resume">
+        <div class="content">
+           <a href="https://drive.google.com/open?id=1NQZ-bIqQANbjilaW1EN8XDfTbgm8DbDz">Download Resume</a>
+        </div>
+      </div> -->
+
   </div>
   <!--JQuery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!--CDN link for  TweenMax-->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js" defer="defer"></script>
-  <!--Custom JS-->
-  <!--<script src="js/main.js" type="text/javascript" defer="defer"></script>-->
-  <!--Custom JS Minified-->
   <script src="js/main.js" type="text/javascript" defer="defer"></script>
 </body>
 

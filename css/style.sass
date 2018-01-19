@@ -1,0 +1,312 @@
+@import 'vars'
+
+#magic-box
+  height: 0
+
+#menu-icon
+  display: none
+
+body
+  font-family: 'NTR', sans-serif
+  font-size: 20px
+  background: $greymetal
+  color: $greymetal
+
+.content
+  margin: 0 auto
+  @media screen and (min-width: $lg)
+    width: 1000px
+  @media screen and (max-width: $lg)
+    padding-left: 20px
+    padding-right: 20px
+
+.content-data
+  display: none
+  padding-top: 10px
+  background: $charchoal
+  h2
+    font-size: 24px
+    font-weight: bold
+    text-align: center
+    float: left
+    width: 100%
+
+#content-home
+  display: block
+  padding-top: 50px
+  padding-bottom: 50px
+  p
+    padding-top: 10px
+    text-align: center
+  h2
+    text-align: center
+
+#content-projects
+  h3
+    color: $brightOrange
+    font-size: 24px
+  a
+    color: $blue
+    text-decoration: none
+    &:hover
+      color: $bluest
+
+#header
+  background-color: $charchoal
+  padding-top: 10px
+  padding-bottom: 10px
+  color: $greymetal
+  height: 50px
+
+
+#header-name-container
+  display: block
+  float: left
+  min-width: 250px
+  h1
+    padding-top: 4px
+    font-size: 24px
+  p
+    padding-top: 4px
+    color: $smoke
+  img
+    width: 50px
+    border-radius: 50px
+    display: inline-block
+    float: left
+    margin-right: 15px
+
+#nav-bar
+  @media screen and (max-width: $md)
+    display: none
+  @media screen and (min-width: $md)
+    display: block !important
+    float: right
+  li
+    float: left
+    min-width: 100px
+    text-align: center
+    cursor: pointer
+    padding: 4px 4px
+    font-size: 20px
+    color: #7c7a7a
+    @media screen and (max-width: $md)
+      width: 100%
+      text-align: center
+      float: left
+      background-color: $smoke
+      color: white
+      padding: 10px 10px
+      padding-right: 30px
+      &:hover
+        background-color: $brightOrange
+        color: $charchoal
+  ul
+    padding-top: 30px
+    @media screen and (max-width: $md)
+      display: block
+      width: 100%
+      margin-left: -20px
+  li:hover
+    color: white
+    border-bottom: 1px solid $brightOrange
+
+
+#content-contact
+  @media screen and (max-width: $md)
+    width: 100%
+    margin: 0
+  .content
+    display: block
+    text-align: center
+  form
+    width: 300px
+    display: inline-block
+    text-align: center
+  input
+    height: 20px
+    font-size: 16px
+  textarea
+    margin-top: 5px
+    width: 100%
+    width: 300px
+    height: 150px
+    font-size: 16px
+  button
+    border-radius: 5px
+    border-width: 0px
+    font-size: 24px
+    color: white
+    background: $blue
+    padding-left: 10px
+    padding-right: 10px
+
+.menu-icon
+  display: none
+  float: right
+  @media screen and (min-width: $md)
+    display: none !important
+
+#menu-icon-contracted
+  @media screen and (max-width: $md)
+    display: block
+
+#nav-bar-mobile
+  @media screen and (min-width: $md)
+    display: none !important
+
+
+#tech-list
+  ul
+    max-width: 400px
+    margin: 0 auto
+  li
+    display: inline-block
+    border-radius: 10px
+    margin-bottom: 5px
+    padding: 10px
+    color: $charchoal
+    background-color: $greymetal
+    text-align: center
+  li:hover
+    background: $magenta
+    color: white
+
+#about-summary
+  max-width: 600px
+  text-align: center
+  margin: 0 auto
+
+.row
+  padding-bottom: 60px
+  padding-top: 50px
+  border-top: 1px solid
+  border-color: $smoke
+
+#about-selfie
+  background-image: url("../images/mexico-potrait-2.jpg")
+  background-position: center center
+  background-size: cover
+  width: 100%
+  height: 300px
+  margin-top: 10px
+  margin-bottom: -10px
+
+.carousel
+  width: 600px
+  height: 300px
+  border: 1px solid white
+  margin: 0 auto
+  @media screen and (max-width: $md)
+    width: 99%
+
+.carousel-img
+  background-position: center center
+  background-size: cover
+  height: 300px
+  width: 100%
+
+#footer
+    font-weight: bold
+    padding-top: 10px
+    margin-bottom: 10px
+    bottom: 0
+    color: $charchoal
+    p
+      font-weight: bold
+      text-align: center
+    ul
+      display: block
+      width: 40%
+      overflow: hidden
+      @media screen and (max-width: $md)
+        width: 100%
+    li
+      min-width: 200px
+      padding-top: 14px
+      display: flex
+      align-items: center
+      width: 100%
+
+// justify-content: center; /* align horizontal */
+
+#footer-contact-info
+  float: left
+
+#footer-site-info
+  float: right
+  h2
+    font-size: 20px
+    border-bottom: 2px solid
+  p
+    font-style: italic
+    text-align: left
+    color: $smoke
+    background: white
+    border-radius: 4px
+    padding: 10px
+
+#social-links
+  img
+    margin-left: 0px
+    margin-right: 5px
+
+.social-link-img
+  width: 40px
+  height: 40px
+  border-radius: 50px
+  background: $charchoal
+  &:hover
+    background: $brightOrange
+
+.footer-images
+  width: 40px
+  height: 40px
+  border-radius: 50px
+  background: $charchoal
+  margin-right: 10px
+
+#resume
+  background-color: $charchoal
+  width: 100%
+  float: left
+  a
+    visibility: hidden
+    display: inline-block
+    float: right
+    background: $brightOrange
+    color: $charchoal
+    padding-top: 5px
+    padding-bottom: 5px
+    padding-left: 15px
+    padding-right: 15px
+    text-decoration: none
+    cursor: pointer
+    @media screen and (max-width: $md)
+    &:hover
+      background: $smoke
+      color: white
+
+.intro-home
+  visibility: hidden
+  float: left
+  width: 100%
+
+#google-play-store
+  background: grey
+  display: inline-block
+  border-radius: 5px
+  cursor: pointer
+  &:hover
+    background: darkgrey
+  img
+    height: 50px
+
+.color-blue
+  color: $blue
+
+.color-magenta
+  color: $magenta
+
+.color-orange
+  color: $brightOrange
