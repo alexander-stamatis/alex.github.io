@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/reset-minified.css">
   <link rel="stylesheet" type="text/css" href="css/base.css">
-  <!--https://daneden.github.io/animate.css/-->
+  <!--CDN from https://daneden.github.io/animate.css/-->
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=NTR">
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lobster|Montserrat|Raleway" rel="stylesheet">
@@ -39,50 +39,37 @@
             <li id="contact">CONTACT</li>
           </ul>
         </div>
-        <div id="resume">
-          <a href="" class="resume-links">RESUME</a>
+        <div class="row w-100 zero-padding-margin">
+          <div id="resume">
+            <a href="" class="resume-links">RESUME</a>
+          </div>
         </div>
       </div>
     </div>
 
     <!--HOME PAGE-->
     <div class="content-data" id="content-home">
-      <div class="content">
+      <div class="row w-100 border-0">
         <h2 class="intro-home">Hi! My name is <span class="color-blue">Alex</span>,</h2>
         <p class="intro-home">and this is my <span class="color-orange">software portfolio</span>.</p>
         <p>&nbsp;</p>
-        <div class="w-100" id="particles-js" style="z-index:0; color: white; position: absolute; top: 150px; left: 0%; right: 50%; height: 400px" >
-        </div>
-        <div class="animated fadeIn" id="front-page-info" id="text-box" style="z-index:1; width: 100%; max-width: 250px; height: auto;  margin: 0 auto;">
-          <img src="images/P1030649.jpg" class="img-fluid w-100" style="border-radius: 5px; display: block; margin: 0 auto;">
-          <div class="h-50 w-100" style="background: rgba(25,25,25,.8); margin-top: 20px">
-            <h2 class="animated fadeIn">Hi! My name is <span class="color-blue">Alex</span>,</h2>
-            <p class="animated fadeIn">and this is my <span class="color-blue">software portfolio</span>.</p>
-            <!-- <p style="margin: 0; padding: 0; color: white">Alexander Stamatis</p>
-            <p style="margin: 0; padding: 0; color: white">&#9993; alex.k.stamatis@gmail.com</p>
-            <p style="margin: 0; padding: 0; color: white">916.540.0751</p> -->
+        <div class="row w-100 border-0" id="particle-container">
+          <div class="w-100" id="particles-js">
           </div>
         </div>
-        <div id="front-page-block" style="height: 420px; display: none">
-
-        </div>
-        <!-- CAROUSEL -->
-        <!-- <div class="carousel">
-          <div class="carousel-wrapper">
-            <div class="carousel-img" id="carousel-home-img"></div>
+          <div class="animated fadeIn" id="front-page-info" id="text-box">
+            <img src="images/P1030649.jpg" class="img-fluid w-100">
+            <h2 class="animated fadeIn">Hi! My name is <span class="color-orange">Alex</span>,</h2>
+            <p class="animated fadeIn">and this is my <span class="color-orange">software portfolio</span>.</p>
           </div>
-        </div> -->
-
-        <p>&nbsp;</p>
       </div>
-      <p>&nbsp;</p>
-      <div class="row w-100 h-100" style="background: white; color: black; margin: 0; padding: 0">
+      <div class="row w-100 h-100 justify-content-center row-s" style="margin-left: 0">
         <div class="container text-center">
           <h1>PROJECTS</h1>
-          <img class="img-fluid" style="width: 5%" src="images/arrow-black.png" alt="">
-          <div class="row w-100 justify-content-center border-0" style="padding-bottom: 10px; ">
-            <img class="w-75 h-100" style="object-fit: contain; max-width: 700px; visibility: hidden;" id="zombie-thing-image"src="images/zombie-thing-phone.png" alt="">
+          <div class="row w-100 border-0 justify-content-center zero-padding-margin">
+            <img class="img-fluid" style="width: 3%" src="images/arrow-black.png" alt="">
           </div>
+          <img class="w-75" id="zombie-thing-image" src="images/zombie-thing-phone.png" alt="">
           <p>&nbsp;</p>
           <div id="google-play-store"><a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en"><img src="images/googleplay-medium.png"></a></div>
           <p>&nbsp;</p>
@@ -157,22 +144,22 @@
 
     <!--CONTACT PAGE-->
     <div class="content-data" id="content-contact">
-      <div class="content">
-        <h2 class="animated fadeInDown">CONTACT</h2>
-        <p>&nbsp;</p>
-        <p class="animated fadeInDown">Feel free to contact at me at any time for any information</p>
-        <p>&nbsp;</p>
-        <p class="animated fadeInDown">Email: alex.k.stamatis@gmail.com</p>
-        <p class="animated fadeInDown">Mobile: +1 (916) 540 0751</p>
-        <p>&nbsp;</p>
-        <form method="POST" action="http://formspree.io/alex.k.stamatis@gmail.com" id="contact-form">
-          <input type="email" name="email" placeholder="Your email">
-          <br>
-          <textarea name="message" placeholder="Your message"></textarea>
-          <br>
-          <button type="submit" class="animated fadeInUp">send</button>
-        </form>
-        <p>&nbsp;</p>
+      <div class="row border-0 w-100">
+        <div class="container">
+          <h2 class="animated fadeInDown">CONTACT</h2>
+          <p>&nbsp;</p>
+          <p class="animated fadeInDown w-100 text-center">Feel free to contact at me at any time for any information</p>
+          <p class="animated fadeInDown w-100 text-center">Email: alex.k.stamatis@gmail.com</p>
+          <p class="animated fadeInDown w-100 text-center">Mobile: +1 (916) 540 0751</p>
+          <form class='w-100' method="POST" action="http://formspree.io/alex.k.stamatis@gmail.com" id="contact-form">
+            <input type="email" name="email" placeholder="Your email">
+            <br>
+            <textarea name="message" placeholder="Your message"></textarea>
+            <br>
+            <button type="submit" class="animated fadeInUp">SEND</button>
+          </form>
+          <p>&nbsp;</p>
+        </div>
       </div>
     </div>
 
@@ -212,9 +199,7 @@
   <script src="js/particles.js-master/particles.js" type="text/javascript"></script>
 
   <script type="text/javascript">
-    particlesJS.load('particles-js', 'js/particles.js-master/particles.json', function() {
-      console.log('callback - particles.js config loaded');
-    });
+
   </script>
 
 </body>

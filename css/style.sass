@@ -46,13 +46,13 @@ body
 
 #content-projects
   h3
-    color: $blue
+    color: $brightOrange
     font-size: 24px
   a
-    color: $blue
+    color: $brightOrange
     text-decoration: none
     &:hover
-      color: $bluest
+      color: $brightOrange
 
 #header
   background-color: $charchoal
@@ -103,17 +103,18 @@ body
       padding: 10px 10px
       padding-right: 30px
       &:hover
-        background-color: $blue
+        background-color: $brightOrange
         color: $charchoal
   ul
     padding-top: 30px
+    margin-left: 0px !important
     @media screen and (max-width: $md)
       display: block
       width: 100%
       margin-left: -20px
   li:hover
     color: white
-    border-bottom: 1px solid $blue
+    border-bottom: 1px solid $brightOrange
 
 
 #content-contact
@@ -140,8 +141,8 @@ body
     border-radius: 5px
     border-width: 0px
     font-size: 24px
-    color: white
-    background: $blue
+    color: $charchoal
+    background: $brightOrange
     padding-left: 10px
     padding-right: 10px
 
@@ -264,7 +265,7 @@ body
   border-radius: 50px
   background: $charchoal
   &:hover
-    background: $blue
+    background: $brightOrange
 
 .footer-images
   width: 40px
@@ -281,8 +282,8 @@ body
     visibility: hidden
     display: inline-block
     float: right
-    background: $blue
-    color: white
+    background: $brightOrange
+    color: $charchoal
     padding-top: 5px
     padding-bottom: 5px
     padding-left: 15px
@@ -315,10 +316,10 @@ body
   width: 100%
   max-width: 600px
 
-#zombie-thing-image:hover
-  width: 100%
-  max-width: 800px
-
+#zombie-thing-phone
+  object-fit: contain
+  max-width: 700px
+  visibility: hidden
 
 .color-blue
   color: $blue
@@ -331,10 +332,36 @@ body
 
 // Particle.js
 #particle-js
-  background: white
-  height: 300px
   width: 100%
+  color: white
+  height: 400px
+  position: absolute
 
-.row
+#particle-container
+  position: absolute
+  left: 0
+  top: 150px
+  margin: 0 auto
+  height: 500px
+
+#front-page-info
+  width: 100%
+  max-width: 250px
+  height: 400px
+  margin: 0 auto
+  img
+    border-radius: 5px
+    display: block
+    margin: 0 auto
+
+.row-s
   padding: 0
-  
+  margin: 0
+  background: white
+  color: black
+  img
+    object-fit: contain
+
+.zero-padding-margin
+  margin: 0 !important
+  padding: 0

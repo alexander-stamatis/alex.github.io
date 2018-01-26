@@ -5,12 +5,16 @@ var carouselTickRate = 10;
 var carouselNoFadeImageDuration = 5000;
 var carouselOpacityCatalystRate = 0.01;
 var resumeLink = "https://drive.google.com/open?id=1gsN9ra1N2oJRT_R4IpMlm5aFyJgtPHvC";
+var particleContainerMobileOffset = 320;
+var particleContainerDesktopOffset = 150;
 
-
+$( window ).resize(function() {
+  if($(window).width() > 930){
+    $("#particle-container").css("top", particleContainerDesktopOffset);
+  }
+});
 
 $(window).scroll(function(){
-    // console.log($('#zombie-thing-image').offset().top < $(this).height() + $(this).scrollTop());
-    console.log($(this).scrollTop());
     if($(this).scrollTop() > 20){
       $('#zombie-thing-image').css("visibility", "visible");
       $('#zombie-thing-image').addClass("animated fadeInLeft");
@@ -21,16 +25,27 @@ $('#project-link').click(function(){
 
   pageDestination = "#content-home";
 
-    $(".content-data").hide();
-    $(pageDestination).show();
+  $(".content-data").hide();
+  $(pageDestination).show();
 
   $('html, body').animate({
     scrollTop: $('#zombie-thing-image').offset().top - 190
   }, 1000);
-  console.log("clicked");
+});
+
+$('#project-home').click(function(){
+  particlesJS.load('particles-js', 'js/particles.js-master/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
 });
 
 $(document).ready(function() {
+
+  particlesJS.load('particles-js', 'js/particles.js-master/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+
+
   $(".resume-links").attr("href", resumeLink);
 
   //mobile nav bar
@@ -38,21 +53,14 @@ $(document).ready(function() {
       $("#nav-bar").css("display", "block");
       $("#menu-icon-expanded").css("display", "block");
       $(this).css("display", "none");
-      $('#particles-js').css("position", "relative");
-      //$('.particles-js-canvas-el').css("float", "0px");
-      $('#front-page-info').css("float", "left");
-      $('#front-page-block').css("display", "block");
+      $("#particle-container").css("top", particleContainerMobileOffset);
   });
 
   function DeactivateMobileNavigation(){
     $("#nav-bar").css("display", "none");
     $("#menu-icon-contracted").css("display", "block");
     $("#menu-icon-expanded").css("display", "none");
-    $('#particles-js').css("position", "absolute");
-    $('#particles-js').css("top", "150px");
-    $('#front-page-block').css("display", "none");
-    $('#front-page-info').css("float", "none");
-
+    $("#particle-container").css("top", particleContainerDesktopOffset);
   }
 
   $("#menu-icon-expanded").click(function() {

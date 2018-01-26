@@ -45,13 +45,13 @@ body {
     text-align: center; }
 
 #content-projects h3 {
-  color: #6D96B3;
+  color: #fbbe5b;
   font-size: 24px; }
 #content-projects a {
-  color: #6D96B3;
+  color: #fbbe5b;
   text-decoration: none; }
   #content-projects a:hover {
-    color: #3ACFEF; }
+    color: #fbbe5b; }
 
 #header {
   background-color: #191919;
@@ -103,10 +103,11 @@ body {
       padding: 10px 10px;
       padding-right: 30px; }
       #nav-bar li:hover {
-        background-color: #6D96B3;
+        background-color: #fbbe5b;
         color: #191919; } }
 #nav-bar ul {
-  padding-top: 30px; }
+  padding-top: 30px;
+  margin-left: 0px !important; }
   @media screen and (max-width: 930px) {
     #nav-bar ul {
       display: block;
@@ -114,7 +115,7 @@ body {
       margin-left: -20px; } }
 #nav-bar li:hover {
   color: white;
-  border-bottom: 1px solid #6D96B3; }
+  border-bottom: 1px solid #fbbe5b; }
 
 @media screen and (max-width: 930px) {
   #content-contact {
@@ -140,8 +141,8 @@ body {
   border-radius: 5px;
   border-width: 0px;
   font-size: 24px;
-  color: white;
-  background: #6D96B3;
+  color: #191919;
+  background: #fbbe5b;
   padding-left: 10px;
   padding-right: 10px; }
 
@@ -262,7 +263,7 @@ body {
   border-radius: 50px;
   background: #191919; }
   .social-link-img:hover {
-    background: #6D96B3; }
+    background: #fbbe5b; }
 
 .footer-images {
   width: 40px;
@@ -279,8 +280,8 @@ body {
     visibility: hidden;
     display: inline-block;
     float: right;
-    background: #6D96B3;
-    color: white;
+    background: #fbbe5b;
+    color: #191919;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 15px;
@@ -312,9 +313,10 @@ body {
   width: 100%;
   max-width: 600px; }
 
-#zombie-thing-image:hover {
-  width: 100%;
-  max-width: 800px; }
+#zombie-thing-phone {
+  object-fit: contain;
+  max-width: 700px;
+  visibility: hidden; }
 
 .color-blue {
   color: #6D96B3; }
@@ -326,11 +328,38 @@ body {
   color: #fbbe5b; }
 
 #particle-js {
-  background: white;
-  height: 300px;
-  width: 100%; }
+  width: 100%;
+  color: white;
+  height: 400px;
+  position: absolute; }
 
-.row {
+#particle-container {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  margin: 0 auto;
+  height: 500px; }
+
+#front-page-info {
+  width: 100%;
+  max-width: 250px;
+  height: 400px;
+  margin: 0 auto; }
+  #front-page-info img {
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; }
+
+.row-s {
+  padding: 0;
+  margin: 0;
+  background: white;
+  color: black; }
+  .row-s img {
+    object-fit: contain; }
+
+.zero-padding-margin {
+  margin: 0 !important;
   padding: 0; }
 
 /*# sourceMappingURL=base.css.map */
