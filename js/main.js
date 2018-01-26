@@ -6,6 +6,8 @@ var carouselNoFadeImageDuration = 5000;
 var carouselOpacityCatalystRate = 0.01;
 var resumeLink = "https://drive.google.com/open?id=1gsN9ra1N2oJRT_R4IpMlm5aFyJgtPHvC";
 
+
+
 $(window).scroll(function(){
     // console.log($('#zombie-thing-image').offset().top < $(this).height() + $(this).scrollTop());
     console.log($(this).scrollTop());
@@ -15,8 +17,20 @@ $(window).scroll(function(){
     }
 });
 
-$(document).ready(function() {
+$('#project-link').click(function(){
 
+  pageDestination = "#content-home";
+
+    $(".content-data").hide();
+    $(pageDestination).show();
+
+  $('html, body').animate({
+    scrollTop: $('#zombie-thing-image').offset().top - 190
+  }, 1000);
+  console.log("clicked");
+});
+
+$(document).ready(function() {
   $(".resume-links").attr("href", resumeLink);
 
   //mobile nav bar
