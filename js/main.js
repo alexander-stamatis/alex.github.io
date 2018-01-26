@@ -6,6 +6,15 @@ var carouselNoFadeImageDuration = 5000;
 var carouselOpacityCatalystRate = 0.01;
 var resumeLink = "https://drive.google.com/open?id=1gsN9ra1N2oJRT_R4IpMlm5aFyJgtPHvC";
 
+$(window).scroll(function(){
+    // console.log($('#zombie-thing-image').offset().top < $(this).height() + $(this).scrollTop());
+    console.log($(this).scrollTop());
+    if($(this).scrollTop() > 20){
+      $('#zombie-thing-image').css("visibility", "visible");
+      $('#zombie-thing-image').addClass("animated fadeInLeft");
+    }
+});
+
 $(document).ready(function() {
 
   $(".resume-links").attr("href", resumeLink);
@@ -15,12 +24,21 @@ $(document).ready(function() {
       $("#nav-bar").css("display", "block");
       $("#menu-icon-expanded").css("display", "block");
       $(this).css("display", "none");
+      $('#particles-js').css("position", "relative");
+      //$('.particles-js-canvas-el').css("float", "0px");
+      $('#front-page-info').css("float", "left");
+      $('#front-page-block').css("display", "block");
   });
 
   function DeactivateMobileNavigation(){
     $("#nav-bar").css("display", "none");
     $("#menu-icon-contracted").css("display", "block");
     $("#menu-icon-expanded").css("display", "none");
+    $('#particles-js').css("position", "absolute");
+    $('#particles-js').css("top", "150px");
+    $('#front-page-block').css("display", "none");
+    $('#front-page-info').css("float", "none");
+
   }
 
   $("#menu-icon-expanded").click(function() {
@@ -49,7 +67,7 @@ $(document).ready(function() {
   });
 
   //Home page carousel
-  Carousel("carousel-home-img", ["zombie-thing-shipyard-2.jpg", "mss-md.jpg", "darkness.jpg", "16_9_dark_elf.jpg"]);
+  //Carousel("carousel-home-img", ["zombie-thing-shipyard-2.jpg", "mss-md.jpg", "darkness.jpg", "16_9_dark_elf.jpg"]);
 
   //Carousel implementation for an element
   function Carousel(element, images) {
@@ -121,15 +139,16 @@ $(document).ready(function() {
 
 
     // $("h2.intro-home").css("visibility")
-    $("h2.intro-home").addClass('animated fadeInLeft');
-    $("h2.intro-home").css("visibility", "visible");
-    $("h2.intro-home").animate('fadeInLeft', function() {
-      $("p.intro-home").css("visibility", "visible");
-      $("p.intro-home").addClass('animated fadeInRight');
-      $("p.intro-home").animate('animated fadeInRight', function() {
-        $(".resume-links").css("visibility", "visible");
-        $(".resume-links").addClass('animated bounceInDown');
-      });
-    });
-
+    // $("h2.intro-home").addClass('animated fadeInLeft');
+    // $("h2.intro-home").css("visibility", "visible");
+    // $("h2.intro-home").animate('fadeInLeft', function() {
+    //   $("p.intro-home").css("visibility", "visible");
+    //   $("p.intro-home").addClass('animated fadeInRight');
+    //   $("p.intro-home").animate('animated fadeInRight', function() {
+    //     $(".resume-links").css("visibility", "visible");
+    //     $(".resume-links").addClass('animated bounceInDown');
+    //   });
+    // });
+    $(".resume-links").css("visibility", "visible");
+    $(".resume-links").addClass('animated fadeIn');
 });

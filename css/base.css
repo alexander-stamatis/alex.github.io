@@ -8,10 +8,10 @@ a[href^="tel:"]:before {
   color: #d33682; }
 
 body {
-  font-family: "NTR", sans-serif;
+  font-family: "Crimson Text", serif;
   font-size: 20px;
-  background: #e5e5e5;
-  color: #e5e5e5; }
+  background: white;
+  color: white; }
 
 .content {
   margin: 0 auto; }
@@ -26,7 +26,8 @@ body {
 .content-data {
   display: none;
   padding-top: 10px;
-  background: #191919; }
+  background: #191919;
+  color: white; }
   .content-data h2 {
     font-size: 24px;
     font-weight: bold;
@@ -36,8 +37,7 @@ body {
 
 #content-home {
   display: block;
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-top: 50px; }
   #content-home p {
     padding-top: 10px;
     text-align: center; }
@@ -45,10 +45,10 @@ body {
     text-align: center; }
 
 #content-projects h3 {
-  color: #fbbe5b;
+  color: #6D96B3;
   font-size: 24px; }
 #content-projects a {
-  color: #268bd2;
+  color: #6D96B3;
   text-decoration: none; }
   #content-projects a:hover {
     color: #3ACFEF; }
@@ -65,10 +65,11 @@ body {
   float: left;
   min-width: 250px; }
   #header-name-container h1 {
-    padding-top: 4px;
-    font-size: 24px; }
+    padding-top: 20px;
+    font-size: 24px;
+    margin: 0; }
   #header-name-container p {
-    padding-top: 4px;
+    padding-top: 0px;
     color: #8F8F8E; }
   #header-name-container img {
     width: 50px;
@@ -102,7 +103,7 @@ body {
       padding: 10px 10px;
       padding-right: 30px; }
       #nav-bar li:hover {
-        background-color: #fbbe5b;
+        background-color: #6D96B3;
         color: #191919; } }
 #nav-bar ul {
   padding-top: 30px; }
@@ -113,7 +114,7 @@ body {
       margin-left: -20px; } }
 #nav-bar li:hover {
   color: white;
-  border-bottom: 1px solid #fbbe5b; }
+  border-bottom: 1px solid #6D96B3; }
 
 @media screen and (max-width: 930px) {
   #content-contact {
@@ -140,7 +141,7 @@ body {
   border-width: 0px;
   font-size: 24px;
   color: white;
-  background: #268bd2;
+  background: #6D96B3;
   padding-left: 10px;
   padding-right: 10px; }
 
@@ -261,7 +262,7 @@ body {
   border-radius: 50px;
   background: #191919; }
   .social-link-img:hover {
-    background: #fbbe5b; }
+    background: #6D96B3; }
 
 .footer-images {
   width: 40px;
@@ -278,8 +279,8 @@ body {
     visibility: hidden;
     display: inline-block;
     float: right;
-    background: #fbbe5b;
-    color: #191919;
+    background: #6D96B3;
+    color: white;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 15px;
@@ -312,12 +313,17 @@ body {
   max-width: 600px; }
 
 .color-blue {
-  color: #268bd2; }
+  color: #6D96B3; }
 
 .color-magenta {
   color: #d33682; }
 
 .color-orange {
   color: #fbbe5b; }
+
+#particle-js {
+  background: white;
+  height: 300px;
+  width: 100%; }
 
 /*# sourceMappingURL=base.css.map */

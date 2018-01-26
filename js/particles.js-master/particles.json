@@ -1,0 +1,25 @@
+{
+  "particles":{
+    "number":{
+      "value": 400
+    },
+    "color":{
+    },
+    "shape":{
+      "type": "edge"
+    },
+    "size":{
+      "value": 0
+    },
+    "line-linked":{
+      "distance": 200
+    }
+  }, "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": { "enable": true, "mode": "grab" },
+      "onclick": { "enable": true, "mode": "repulse" },
+      "resize": true
+    }
+  }
+}

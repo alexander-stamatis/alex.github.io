@@ -10,10 +10,10 @@ a[href^="tel:"]:before
   color: $magenta
 
 body
-  font-family: 'NTR', sans-serif
+  font-family: 'Crimson Text', serif
   font-size: 20px
-  background: $greymetal
-  color: $greymetal
+  background: white
+  color: white
 
 .content
   margin: 0 auto
@@ -27,6 +27,7 @@ body
   display: none
   padding-top: 10px
   background: $charchoal
+  color: white
   h2
     font-size: 24px
     font-weight: bold
@@ -37,7 +38,6 @@ body
 #content-home
   display: block
   padding-top: 50px
-  padding-bottom: 50px
   p
     padding-top: 10px
     text-align: center
@@ -46,7 +46,7 @@ body
 
 #content-projects
   h3
-    color: $brightOrange
+    color: $blue
     font-size: 24px
   a
     color: $blue
@@ -67,10 +67,11 @@ body
   float: left
   min-width: 250px
   h1
-    padding-top: 4px
+    padding-top: 20px
     font-size: 24px
+    margin: 0
   p
-    padding-top: 4px
+    padding-top: 0px
     color: $smoke
   img
     width: 50px
@@ -102,7 +103,7 @@ body
       padding: 10px 10px
       padding-right: 30px
       &:hover
-        background-color: $brightOrange
+        background-color: $blue
         color: $charchoal
   ul
     padding-top: 30px
@@ -112,7 +113,7 @@ body
       margin-left: -20px
   li:hover
     color: white
-    border-bottom: 1px solid $brightOrange
+    border-bottom: 1px solid $blue
 
 
 #content-contact
@@ -263,7 +264,7 @@ body
   border-radius: 50px
   background: $charchoal
   &:hover
-    background: $brightOrange
+    background: $blue
 
 .footer-images
   width: 40px
@@ -280,8 +281,8 @@ body
     visibility: hidden
     display: inline-block
     float: right
-    background: $brightOrange
-    color: $charchoal
+    background: $blue
+    color: white
     padding-top: 5px
     padding-bottom: 5px
     padding-left: 15px
@@ -322,3 +323,9 @@ body
 
 .color-orange
   color: $brightOrange
+
+// Particle.js
+#particle-js
+  background: white
+  height: 300px
+  width: 100%

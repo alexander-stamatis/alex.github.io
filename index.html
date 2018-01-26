@@ -9,8 +9,11 @@
   <!--https://daneden.github.io/animate.css/-->
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=NTR">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lobster|Montserrat|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <title>Alexander Stamatis</title>
 </head>
+
 
 <body>
   <div id="container">
@@ -28,7 +31,7 @@
         </div>
         <img src="images/menu-icon-expanded.png" class="menu-icon" height="40px" width="40px" id="menu-icon-expanded">
         <img src="images/menu-icon-contracted.png" class="menu-icon" height="40px" width="40px" id="menu-icon-contracted">
-        <div id="nav-bar">
+        <div id="nav-bar" style="z-index:3;">
           <ul>
             <li id="home">HOME</li>
             <li id="projects">PROJECTS</li>
@@ -48,17 +51,50 @@
         <h2 class="intro-home">Hi! My name is <span class="color-blue">Alex</span>,</h2>
         <p class="intro-home">and this is my <span class="color-orange">software portfolio</span>.</p>
         <p>&nbsp;</p>
+        <div class="w-100" id="particles-js" style="z-index:0; color: white; position: absolute; top: 150px; left: 0%; right: 50%; height: 400px" >
+        </div>
+        <div class="animated fadeIn" id="front-page-info" id="text-box" style="z-index:1; width: 100%; max-width: 300px; height: auto;  margin: 0 auto;">
+          <img src="images/potrait-2.jpg" class="img-fluid w-50" style="border-radius: 5px; display: block; margin: 0 auto;">
+          <div class="h-50 w-100" style="background: rgba(25,25,25,.8); margin-top: 20px">
+            <h2 class="animated fadeIn">Hi! My name is <span class="color-blue">Alex</span>,</h2>
+            <p class="animated fadeIn">and this is my <span class="color-blue">software portfolio</span>.</p>
+            <!-- <p style="margin: 0; padding: 0; color: white">Alexander Stamatis</p>
+            <p style="margin: 0; padding: 0; color: white">&#9993; alex.k.stamatis@gmail.com</p>
+            <p style="margin: 0; padding: 0; color: white">916.540.0751</p> -->
+          </div>
+        </div>
+        <div id="front-page-block" style="height: 420px; display: none">
 
+        </div>
         <!-- CAROUSEL -->
-        <div class="carousel">
+        <!-- <div class="carousel">
           <div class="carousel-wrapper">
             <div class="carousel-img" id="carousel-home-img"></div>
           </div>
-        </div>
+        </div> -->
 
         <p>&nbsp;</p>
       </div>
+      <p>&nbsp;</p>
+      <div class="row h-100" style="background: white; color: black">
+        <div class="container text-center">
+          <h1>PROJECTS</h1>
+          <img class="img-fluid" style="width: 5%" src="images/arrow-black.png" alt="">
+          <div class="row w-100 justify-content-center border-0" style="padding-bottom: 10px">
+            <img class="w-100 h-100" style="object-fit: contain; max-width: 700px; visibility: hidden;" id="zombie-thing-image"src="images/zombie-thing-phone.png" alt="">
+          </div>
+          <p>&nbsp;</p>
+          <div id="google-play-store"><a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en"><img src="images/googleplay-medium.png"></a></div>
+          <p>&nbsp;</p>
+          <h3 class="animated fadeInUp">Zombie Thing</h3>
+          <p class="animated fadeInUp">Deployed on <a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en">Google Play Store</a>. An android mobile application developed in Unity, where the player can kill zombies, earn money, purchase new weapons,
+            and repair barriers. Implemented Google Play Services and Google AdMob API. Created 3D assets in Blender and Substance Painter 2. </p>
+          <p>Technologies: Unity, C#, Git, Photoshop, Google Admob, Substance Painter 2, Blender</p>
+        </div>
+      </div>
     </div>
+
+
 
     <!--PROJECTS PAGE-->
     <div class="content-data" id="content-projects">
@@ -172,6 +208,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!--JS functionality for mobile navigation, carousel, and animate.css class implementation-->
   <script src="js/main.js" type="text/javascript" defer="defer"></script>
+
+  <script src="js/particles.js-master/particles.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    particlesJS.load('particles-js', 'js/particles.js-master/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
+
 </body>
 
 </html>
