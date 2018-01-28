@@ -29,16 +29,18 @@ var navToMobile = true;
 $('#mobile-menu-active').hide();
 
 function SetMobileNavigation(enable){
-  if(enable){
-    $('#mobile-menu').hide();
-    $('#mobile-menu-active').show();
-    $("#nav-bar").show();
-    $("#introduction").css("top", "70vh");
-  } else{
-    $('#mobile-menu').show();
-    $('#mobile-menu-active').hide();
-    $("#nav-bar").hide();
-    $("#introduction").css("top", "40vh");
+  if($(window).width() < 930){
+    if(enable){
+      $('#mobile-menu').hide();
+      $('#mobile-menu-active').show();
+      $("#nav-bar").show();
+      $("#introduction").css("top", "70vh");
+    } else{
+      $('#mobile-menu').show();
+      $('#mobile-menu-active').hide();
+      $("#nav-bar").hide();
+      $("#introduction").css("top", "40vh");
+    }
   }
 }
 
@@ -55,6 +57,7 @@ $( window ).resize(function() {
 
   if($(window).width() > 930){
     $("#particle-container").css("top", particleContainerDesktopOffset);
+    $("#nav-bar").show();
   }
 
   if($(window).width() > 930){
@@ -134,9 +137,6 @@ $(document).ready(function() {
 
   //set resume link to element
   $(".resume-links").attr("href", resumeLink);
-
-
-
   $(".resume-links").css("visibility", "visible");
   $(".resume-links").addClass('animated fadeIn');
 
