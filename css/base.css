@@ -1,103 +1,28 @@
-#magic-box {
-  height: 0; }
-
-#menu-icon {
-  display: none; }
-
-a[href^="tel:"]:before {
-  color: #d33682; }
-
 body {
   font-family: "Crimson Text", serif;
   font-size: 20px;
   background: white;
   color: white; }
 
-.content {
-  margin: 0 auto; }
-  @media screen and (min-width: 1000px) {
-    .content {
-      width: 1000px; } }
-  @media screen and (max-width: 1000px) {
-    .content {
-      padding-left: 20px;
-      padding-right: 20px; } }
-
-.content-data {
-  display: none;
-  padding-top: 10px;
-  background: #191919;
-  color: white; }
-  .content-data h2 {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    float: left;
-    width: 100%; }
-
-#content-home {
-  display: block;
-  padding-top: 50px; }
-  #content-home p {
-    padding-top: 10px;
-    text-align: center; }
-  #content-home h2 {
-    text-align: center; }
-
-#content-projects h3 {
-  color: #fbbe5b;
-  font-size: 24px; }
-#content-projects a {
-  color: #fbbe5b;
-  text-decoration: none; }
-  #content-projects a:hover {
-    color: #fbbe5b; }
-
-#header {
-  background-color: #191919;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #e5e5e5;
-  height: 50px; }
-
-#header-name-container {
-  display: block;
-  float: left;
-  min-width: 250px; }
-  #header-name-container h1 {
-    padding-top: 20px;
-    font-size: 24px;
-    margin: 0; }
-  #header-name-container p {
-    padding-top: 0px;
-    color: #8F8F8E; }
-  #header-name-container img {
-    width: 50px;
-    border-radius: 50px;
-    display: inline-block;
-    float: left;
-    margin-right: 15px; }
+#navbar-fixed {
+  visibility: hidden;
+  background: RGBA(255, 255, 255, 0.8); }
 
 @media screen and (max-width: 930px) {
   #nav-bar {
     display: none; } }
-@media screen and (min-width: 930px) {
-  #nav-bar {
-    display: block !important;
-    float: right; } }
 #nav-bar li {
-  float: left;
+  float: right;
   min-width: 100px;
   text-align: center;
   cursor: pointer;
   padding: 4px 4px;
-  font-size: 20px;
+  font-size: 16px;
   color: #7c7a7a; }
   @media screen and (max-width: 930px) {
     #nav-bar li {
       width: 100%;
       text-align: center;
-      float: left;
       background-color: #8F8F8E;
       color: white;
       padding: 10px 10px;
@@ -105,39 +30,37 @@ body {
       #nav-bar li:hover {
         background-color: #fbbe5b;
         color: #191919; } }
+#nav-bar li:hover {
+  color: black;
+  border-bottom: 1px solid #fbbe5b; }
 #nav-bar ul {
-  padding-top: 30px;
-  margin-left: 0px !important; }
+  padding-top: 30px; }
   @media screen and (max-width: 930px) {
     #nav-bar ul {
-      display: block;
-      width: 100%;
-      margin-left: -20px; } }
-#nav-bar li:hover {
-  color: white;
-  border-bottom: 1px solid #fbbe5b; }
+      width: 80vw;
+      margin: 0 auto; } }
 
 @media screen and (max-width: 930px) {
-  #content-contact {
+  #contact-form {
     width: 100%;
     margin: 0; } }
-#content-contact .content {
+#contact-form .content {
   display: block;
   text-align: center; }
-#content-contact form {
+#contact-form form {
   width: 300px;
   display: inline-block;
   text-align: center; }
-#content-contact input {
-  height: 20px;
+#contact-form input {
+  height: 30px;
   font-size: 16px; }
-#content-contact textarea {
+#contact-form textarea {
   margin-top: 5px;
   width: 100%;
   width: 300px;
   height: 150px;
   font-size: 16px; }
-#content-contact button {
+#contact-form button {
   border-radius: 5px;
   border-width: 0px;
   font-size: 24px;
@@ -146,36 +69,31 @@ body {
   padding-left: 10px;
   padding-right: 10px; }
 
-.menu-icon {
-  display: none;
-  float: right;
-  opacity: 0.4; }
-  .menu-icon:hover {
-    opacity: 0.8; }
-  @media screen and (min-width: 930px) {
-    .menu-icon {
-      display: none !important; } }
+.zombie-thing-image {
+  margin: 0 auto;
+  display: block;
+  max-width: 600px !important; }
 
-@media screen and (max-width: 930px) {
-  #menu-icon-contracted {
-    display: block; } }
+.img-m {
+  width: 100%;
+  max-width: 400px !important; }
 
-@media screen and (min-width: 930px) {
-  #nav-bar-mobile {
-    display: none !important; } }
+#img-potrait {
+  visibility: hidden; }
 
-#tech-list ul {
+.tech-list ul {
   max-width: 400px;
-  margin: 0 auto; }
-#tech-list li {
+  margin: 0 auto;
+  text-align: center; }
+.tech-list li {
   display: inline-block;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin: 3px 3px;
   padding: 10px;
   color: #191919;
   background-color: #e5e5e5;
-  text-align: center; }
-#tech-list li:hover {
+  visibility: hidden; }
+.tech-list li:hover {
   background: #d33682;
   color: white; }
 
@@ -183,21 +101,6 @@ body {
   max-width: 600px;
   text-align: center;
   margin: 0 auto; }
-
-.row {
-  padding-bottom: 60px;
-  padding-top: 50px;
-  border-top: 1px solid;
-  border-color: #8F8F8E; }
-
-#about-selfie {
-  background-image: url("../images/P1030632.JPG");
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
-  margin-top: 10px;
-  margin-bottom: -10px; }
 
 .carousel {
   width: 600px;
@@ -207,12 +110,6 @@ body {
   @media screen and (max-width: 930px) {
     .carousel {
       width: 99%; } }
-
-.carousel-img {
-  background-position: center center;
-  background-size: cover;
-  height: 300px;
-  width: 100%; }
 
 #footer {
   font-weight: bold;
@@ -237,8 +134,8 @@ body {
     align-items: center;
     width: 100%; }
 
-#footer-contact-info {
-  float: left; }
+#footer-contact-info li {
+  padding: 5px 0px; }
 
 #footer-site-info {
   float: right; }
@@ -253,6 +150,13 @@ body {
     border-radius: 4px;
     padding: 10px; }
 
+.footer-images {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #191919;
+  margin-right: 10px; }
+
 #social-links img {
   margin-left: 0px;
   margin-right: 5px; }
@@ -265,15 +169,7 @@ body {
   .social-link-img:hover {
     background: #fbbe5b; }
 
-.footer-images {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  background: #191919;
-  margin-right: 10px; }
-
 #resume {
-  background-color: #191919;
   width: 100%;
   float: left; }
   #resume a {
@@ -292,53 +188,23 @@ body {
       background: #8F8F8E;
       color: white; }
 
-.intro-home {
-  visibility: hidden;
-  float: left;
-  width: 100%; }
-
-#google-play-store {
-  background: grey;
-  display: inline-block;
-  border-radius: 5px;
-  cursor: pointer; }
-  #google-play-store:hover {
-    background: darkgrey; }
-  #google-play-store img {
-    height: 50px; }
-
-#zombie-thing-gif {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 600px; }
-
 #zombie-thing-phone {
   object-fit: contain;
   max-width: 700px;
   visibility: hidden; }
 
-.color-blue {
-  color: #6D96B3; }
-
-.color-magenta {
-  color: #d33682; }
-
-.color-orange {
-  color: #fbbe5b; }
+.margin-0 {
+  margin: 0 !important; }
 
 #particle-js {
   width: 100%;
-  color: white;
-  height: 400px;
-  position: absolute; }
+  color: white; }
 
 #particle-container {
-  position: absolute;
   left: 0;
   top: 150px;
   margin: 0 auto;
-  height: 500px; }
+  height: 80.5vh; }
 
 #front-page-info {
   width: 100%;
@@ -350,16 +216,52 @@ body {
     display: block;
     margin: 0 auto; }
 
-.row-s {
-  padding: 0;
-  margin: 0;
-  background: white;
-  color: black; }
-  .row-s img {
-    object-fit: contain; }
+#introduction {
+  top: 40vh;
+  left: 0;
+  position: absolute; }
+  #introduction h2 {
+    background: rgba(25, 25, 25, 0.8); }
+  #introduction p {
+    background: rgba(25, 25, 25, 0.8); }
 
-.zero-padding-margin {
-  margin: 0 !important;
-  padding: 0; }
+#header-title {
+  margin-bottom: 0; }
+  #header-title h1 {
+    font-size: 20px;
+    margin-bottom: 0; }
+  #header-title p {
+    margin-bottom: 0; }
+
+.mobile-menu {
+  width: 40px;
+  height: 40px;
+  cursor: pointer !important;
+  background: none;
+  border: 0; }
+  @media screen and (min-width: 930px) {
+    .mobile-menu {
+      display: none; } }
+
+.color-blue {
+  color: #6D96B3 !important; }
+
+.color-magenta {
+  color: #d33682 !important; }
+
+.color-orange {
+  color: #fbbe5b !important; }
+
+.color-smoke {
+  color: #8F8F8E !important; }
+
+.color-charchoal {
+  color: #191919 !important; }
+
+.bg-charchoal {
+  background: #191919 !important; }
+
+.bg-smoke {
+  background: #8F8F8E !important; }
 
 /*# sourceMappingURL=base.css.map */
