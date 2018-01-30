@@ -10,7 +10,10 @@ body {
 
 @media screen and (max-width: 930px) {
   #nav-bar {
-    display: none; } }
+    display: none;
+    width: 100%; }
+    #nav-bar ul {
+      width: 100%; } }
 #nav-bar li {
   float: right;
   min-width: 100px;
@@ -21,12 +24,10 @@ body {
   color: #7c7a7a; }
   @media screen and (max-width: 930px) {
     #nav-bar li {
-      width: 100%;
+      width: 99%;
       text-align: center;
       background-color: #8F8F8E;
-      color: white;
-      padding: 10px 10px;
-      padding-right: 30px; }
+      color: white; }
       #nav-bar li:hover {
         background-color: #fbbe5b;
         color: #191919; } }
@@ -37,7 +38,6 @@ body {
   padding-top: 30px; }
   @media screen and (max-width: 930px) {
     #nav-bar ul {
-      width: 80vw;
       margin: 0 auto; } }
 
 @media screen and (max-width: 930px) {
