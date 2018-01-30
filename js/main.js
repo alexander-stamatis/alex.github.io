@@ -33,7 +33,7 @@ function SetMobileNavigation(enable){
     if(enable){
       $('#mobile-menu').hide();
       $('#mobile-menu-active').show();
-      $("#nav-bar").show();
+      // $("#nav-bar").show();
       $("#introduction").css("top", "70vh");
     } else{
       $('#mobile-menu').show();
@@ -46,7 +46,7 @@ function SetMobileNavigation(enable){
 
 //mobile nav bar
 $("#mobile-menu").click(function() {
-  //SetMobileNavigation(true);
+  SetMobileNavigation(true);
 });
 
 $("#mobile-menu-active").click(function() {
