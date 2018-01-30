@@ -241,7 +241,7 @@ body {
   border: 0;
   padding: 0; }
   .mobile-menu img {
-    object-fit: contain; }
+    object-fit: cover; }
   @media screen and (min-width: 930px) {
     .mobile-menu {
       display: none; } }
