@@ -234,14 +234,14 @@ body {
     margin-bottom: 0; }
 
 .mobile-menu {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   cursor: pointer !important;
   background: none;
   border: 0;
   padding: 0; }
   .mobile-menu img {
-    object-fit: cover; }
+    object-fit: contain; }
   @media screen and (min-width: 930px) {
     .mobile-menu {
       display: none; } }
