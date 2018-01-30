@@ -46,7 +46,7 @@ function SetMobileNavigation(enable){
 
 //mobile nav bar
 $("#mobile-menu").click(function() {
-  SetMobileNavigation(true);
+  //SetMobileNavigation(true);
 });
 
 $("#mobile-menu-active").click(function() {
