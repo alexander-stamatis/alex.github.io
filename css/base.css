@@ -13,7 +13,8 @@ body {
     display: none;
     width: 100%; }
     #nav-bar ul {
-      width: 100%; } }
+      width: 100%;
+      color: red; } }
 #nav-bar li {
   float: right;
   min-width: 100px;
@@ -27,7 +28,9 @@ body {
       width: 99%;
       text-align: center;
       background-color: #8F8F8E;
-      color: white; }
+      color: white;
+      padding: 12px;
+      font-size: 20px; }
       #nav-bar li:hover {
         background-color: #fbbe5b;
         color: #191919; } }
@@ -101,6 +104,16 @@ body {
   max-width: 600px;
   text-align: center;
   margin: 0 auto; }
+
+.text-summary {
+  max-width: 720px;
+  text-align: center;
+  margin: 0 auto; }
+
+.technology-list {
+  margin-top: 10px;
+  color: #787878;
+  text-align: center; }
 
 .carousel {
   width: 600px;
@@ -226,7 +239,8 @@ body {
     background: rgba(25, 25, 25, 0.8); }
 
 #header-title {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  cursor: pointer; }
   #header-title h1 {
     font-size: 20px;
     margin-bottom: 0; }

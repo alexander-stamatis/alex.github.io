@@ -1,5 +1,5 @@
 var imageFolder = "images/";
-var resumeLink = "https://drive.google.com/open?id=1gsN9ra1N2oJRT_R4IpMlm5aFyJgtPHvC";
+var resumeLink = "https://drive.google.com/open?id=1guPYZ0aUDtqEl_HrSQjpyTdY2E83akXB";
 var particleContainerMobileOffset = 320;
 var particleContainerDesktopOffset = 150;
 var techonologies = [
@@ -12,6 +12,7 @@ var techonologies = [
   "sass",
   "php",
   "sql",
+  "wordpress",
   "atom",
   "visual studio",
   "unity 3d",
@@ -77,12 +78,25 @@ $( window ).resize(function() {
 
 });
 
+// var pos = document.getElementById('zombie-thing-image');
+// console.log(pos.offsetTop);
+
+console.log(document.getElementById('zombie-thing-image').offsetTop + 200);
+$('#sactohicoffee-image').css("visibility", "hidden");
+$('#zombie-thing-image').css("visibility", "hidden");
+
 // reveals elements when scrolling
 $(window).scroll(function(){
     if($(this).scrollTop() > 20){
+      $('#sactohicoffee-image').css("visibility", "visible");
+      $('#sactohicoffee-image').addClass("animated fadeInLeft");
+    }
+
+    if($(this).scrollTop() > document.getElementById('zombie-thing-image').offsetTop - 500){
       $('#zombie-thing-image').css("visibility", "visible");
       $('#zombie-thing-image').addClass("animated fadeInLeft");
     }
+
 
     if($(this).scrollTop() > 50){
       $(".navbar").addClass("fixed-top");
@@ -92,12 +106,12 @@ $(window).scroll(function(){
       $(".navbar").css("background", "RGBA(255,255,255,1)");
     }
 
-    if($(this).scrollTop() > 1100){
+    if($(this).scrollTop() > document.getElementById("img-potrait").offsetTop - 300){
       $('#img-potrait').css("visibility", "visible");
       $('#img-potrait').addClass("animated fadeIn");
     }
 
-    if($(this).scrollTop() > 1600){
+    if($(this).scrollTop() > document.getElementById("tech-list").offsetTop - 600){
       $(".tech-list li").css("visibility", "visible");
       $(".tech-list li").addClass("animated fadeIn");
 
@@ -108,19 +122,26 @@ $(window).scroll(function(){
 // scroll to destination
 $('#project-link').click(function(){
   $('html, body').animate({
-    scrollTop: $('#zombie-thing-image').offset().top - 190
+    scrollTop: $('#sactohicoffee-image').offset().top - 190
   }, 1000);
 });
 
 $('#about').click(function(){
   $('html, body').animate({
-    scrollTop: $("#about-section").offset().top
+    scrollTop: $("#about-section").offset().top - 100
   }), 1000;
 });
 
 $('#contact').click(function(){
   $('html, body').animate({
-    scrollTop: $("#contact-section").offset().top
+    scrollTop: $("#contact-section").offset().top - 50
+  }), 1000;
+});
+
+$('#header-title').click(function(){
+  console.log('hello');
+  $('html, body').animate({
+    scrollTop: 0
   }), 1000;
 });
 
