@@ -1,5 +1,5 @@
 var imageFolder = "images/";
-var resumeLink = "https://drive.google.com/open?id=10hMXp_jRjWnN4CmcmVRDhrY5IqoZAy3y";
+var resumeLink = "https://drive.google.com/open?id=10soMTNqK_b532u6FPM64xjLYxCXErIo5";
 var particleContainerMobileOffset = 320;
 var particleContainerDesktopOffset = 150;
 var techonologies = [
