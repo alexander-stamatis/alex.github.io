@@ -1,226 +1,292 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/reset-minified.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <!--CDN from https://daneden.github.io/animate.css/-->
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=NTR" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Crimson+Text|Lobster|Montserrat|Raleway"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <title>Alexander Stamatis</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/reset-minified.css">
-  <link rel="stylesheet" type="text/css" href="css/base.css">
-  <!--CDN from https://daneden.github.io/animate.css/-->
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=NTR">
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lobster|Montserrat|Raleway" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Alexander Stamatis</title>
-</head>
-
-<body>
-
-  <!-- Header -->
-  <nav class="navbar navbar-toggleable-md" role="navigation">
-    <div class="container">
-      <ul id="header-title">
-        <li>
-          <h1 class="color-smoke">ALEXANDER STAMATIS</h1>
-        </li>
-        <li>
-          <p class="color-smoke">Software Developer</p>
-        </li>
-      </ul>
-      <button class="mobile-menu" type="button" name="button" id="mobile-menu">
-        <img src="images/mobile-menu.png">
-      </button>
-      <button class="mobile-menu" type="button" name="button" id="mobile-menu-active">
-        <img src="images/mobile-menu-active.png">
-      </button>
-      <div id="nav-bar">
-        <ul>
-          <li onclick="SetMobileNavigation(false)" id="contact">CONTACT</li>
-          <li onclick="SetMobileNavigation(false)" id="about">ABOUT</li>
-          <li onclick="SetMobileNavigation(false)" id="project-link">PROJECTS</li>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-toggleable-md" role="navigation">
+      <div class="container">
+        <ul id="header-title">
+          <li>
+            <h1 class="color-smoke">ALEXANDER STAMATIS</h1>
+          </li>
+          <li>
+            <p class="color-smoke">Software Developer</p>
+          </li>
         </ul>
+        <button
+          class="mobile-menu"
+          type="button"
+          name="button"
+          id="mobile-menu"
+        >
+          <img src="images/mobile-menu.png" />
+        </button>
+        <button
+          class="mobile-menu"
+          type="button"
+          name="button"
+          id="mobile-menu-active"
+        >
+          <img src="images/mobile-menu-active.png" />
+        </button>
+        <div id="nav-bar">
+          <ul>
+            <li onclick="SetMobileNavigation(false)" id="contact">CONTACT</li>
+            <li onclick="SetMobileNavigation(false)" id="about">ABOUT</li>
+            <li onclick="SetMobileNavigation(false)" id="project-link">
+              PROJECTS
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Resume Link -->
-  <div class="container">
+    <!-- Resume Link -->
+    <!-- <div class="container">
     <div id="resume">
       <a href="" class="resume-links">RESUME</a>
     </div>
-  </div>
+  </div> -->
 
-  <!-- Home Page -->
-  <div class="jumbotron bg-charchoal margin-0">
+    <!-- Home Page -->
+    <div class="jumbotron bg-charchoal margin-0">
+      <div class="container">
+        <div class="row w-100" id="particle-container">
+          <div class="w-100" id="particles-js"></div>
+        </div>
+        <div class="row w-100 text-align-center" id="introduction">
+          <div class="row w-100 h-100 justify-content-center">
+            <h2 class="color-smoke">
+              My name is <span class="color-blue">Alex</span>,
+            </h2>
+          </div>
+          <div class="row w-100 h-100 justify-content-center">
+            <p class="color-smoke">
+              and this is my
+              <span class="color-orange">software portfolio</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project section -->
+    <div class="jumbotron color-charchoal" id="project-section">
+      <div class="container">
+        <div class="row w-100 justify-content-center">
+          <h1>PROJECTS</h1>
+        </div>
+        <p>&nbsp;</p>
+        <a href="http://sactohicoffee.com/">
+          <img
+            class="img-fluid w-100 zombie-thing-image"
+            id="sactohicoffee-image"
+            src="images/sactohicoffee.png"
+            alt=""
+          />
+        </a>
+        <p>&nbsp;</p>
+        <div class="row w-100 justify-content-center">
+          <h3>Hi Coffee Website</h3>
+        </div>
+        <div class="row w-100 justify-content-center">
+          <p class="text-summary">
+            <a href="http://sactohicoffee.com/">Sactohicoffee.com</a> is a site
+            created for Hi Coffee shop located in Rancho Cordova, CA. It's a
+            custom Wordpress theme site hosted on Bluehost. I went over
+            potential wireframes, changes in the electronic prototype, and
+            specific needs with Ana, the owner of Hi Coffee, and her husband
+            Ara.
+          </p>
+          <p class="technology-list">
+            Technologies: HTML5, CSS3, Bootstrap, Wordpress, PHP, phpMyAdmin
+          </p>
+        </div>
+
+        <p>&nbsp;</p>
+        <a
+          href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en"
+        >
+          <img
+            class="img-fluid w-100 zombie-thing-image"
+            id="zombie-thing-image"
+            src="images/zombie-thing-phone.png"
+            alt=""
+          />
+        </a>
+        <p>&nbsp;</p>
+        <div class="row w-100 justify-content-center">
+          <h3>Zombie Thing</h3>
+        </div>
+        <div class="row w-100 justify-content-center">
+          <p class="text-summary">
+            Deployed on
+            <a
+              href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en"
+              >Google Play Store</a
+            >. An android mobile application developed in Unity, where the
+            player can kill zombies, earn money, purchase new weapons, and
+            repair barriers. Implemented Google Play Services and Google AdMob
+            API. Created 3D assets in Blender and Substance Painter 2.
+          </p>
+          <p class="technology-list">
+            Technologies: Unity, C#, Git, Photoshop, Google Admob, Substance
+            Painter 2, Blender
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--About page -->
+    <div class="container" id="about-section">
+      <div class="row justify-content-center">
+        <h2>ALEXANDER STAMATIS</h2>
+      </div>
+      <p>&nbsp;</p>
+      <div class="row justify-content-center">
+        <div>
+          <img
+            class="img-fluid img-m"
+            id="img-potrait"
+            src="images/mexico-potrait-2.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <p>&nbsp;</p>
+      <div class="row">
+        <p id="about-summary">
+          I'm Alex, a software developer who works on web and game applications.
+          I'm currently learning Bootstrap, PHP, and SQL. I am also working on a
+          multiplayer FPS game. Outside of computers, I love to travel, jam on
+          the guitar, and play tabletop games with friends!
+        </p>
+      </div>
+      <p>&nbsp;</p>
+    </div>
+
+    <hr />
+
+    <!-- Technologies -->
     <div class="container">
-      <div class="row w-100" id="particle-container">
-        <div class="w-100" id="particles-js">
-        </div>
-      </div>
-      <div class="row w-100 text-align-center" id="introduction">
-        <div class="row w-100 h-100 justify-content-center">
-          <h2 class="color-smoke">My name is
-            <span class="color-blue">Alex</span>,</h2>
-        </div>
-        <div class="row w-100 h-100 justify-content-center">
-          <p class="color-smoke">and this is my
-            <span class="color-orange">software portfolio</span>.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Project section -->
-  <div class="jumbotron color-charchoal" id="project-section">
-    <div class="container">
-
-      <div class="row w-100 justify-content-center">
-        <h1>PROJECTS</h1>
-      </div>
-      <p>&nbsp;</p>
-      <a href="http://sactohicoffee.com/">
-        <img class="img-fluid w-100 zombie-thing-image" id="sactohicoffee-image" src="images/sactohicoffee.png" alt="">
-      </a>
       <p>&nbsp;</p>
       <div class="row w-100 justify-content-center">
-        <h3>Hi Coffee Website</h3>
+        <h2>TECHNOLOGIES</h2>
       </div>
-      <div class="row w-100 justify-content-center">
-        <p class="text-summary">
-          <a href="http://sactohicoffee.com/">Sactohicoffee.com</a> is a site created for Hi Coffee shop located in Rancho Cordova, CA. It's a custom Wordpress
-          theme site hosted on Bluehost. I went over potential wireframes, changes in the electronic prototype, and specific
-          needs with Ana, the owner of Hi Coffee, and her husband Ara.</p>
-        <p class="technology-list">Technologies: HTML5, CSS3, Bootstrap, Wordpress, PHP, phpMyAdmin</p>
-      </div>
-
       <p>&nbsp;</p>
-      <a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en">
-        <img class="img-fluid w-100 zombie-thing-image" id="zombie-thing-image" src="images/zombie-thing-phone.png" alt="">
-      </a>
+      <div class="row justify-content-center tech-list">
+        <ul id="tech-list"></ul>
+      </div>
       <p>&nbsp;</p>
-      <div class="row w-100 justify-content-center">
-        <h3>Zombie Thing</h3>
-      </div>
-      <div class="row w-100 justify-content-center">
-        <p class="text-summary">Deployed on
-          <a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en">Google Play Store</a>. An android mobile application developed in Unity, where the player can kill zombies, earn
-          money, purchase new weapons, and repair barriers. Implemented Google Play Services and Google AdMob API. Created
-          3D assets in Blender and Substance Painter 2. </p>
-        <p class="technology-list">Technologies: Unity, C#, Git, Photoshop, Google Admob, Substance Painter 2, Blender</p>
-      </div>
-
-
     </div>
-  </div>
 
+    <hr />
 
-
-  <!--About page -->
-  <div class="container" id="about-section">
-    <div class="row justify-content-center">
-      <h2>ALEXANDER STAMATIS</h2>
-    </div>
-    <p>&nbsp;</p>
-    <div class="row justify-content-center">
-      <div>
-        <img class="img-fluid img-m" id="img-potrait" src="images/mexico-potrait-2.jpg" alt="">
-      </div>
-    </div>
-    <p>&nbsp;</p>
-    <div class="row">
-      <p id="about-summary">I'm Alex, a software developer who works on web and game applications. I'm currently learning Bootstrap, PHP, and SQL.
-        I am also working on a multiplayer FPS game. Outside of computers, I love to travel, jam on the guitar, and play
-        tabletop games with friends!
+    <!-- Contact form -->
+    <div class="container" id="contact-section">
+      <p>&nbsp;</p>
+      <h2 class="w-100 text-center">CONTACT</h2>
+      <p>&nbsp;</p>
+      <p class="w-100 text-center">
+        Feel free to contact at me at any time for any information
       </p>
+      <p class="w-100 text-center">Email: alex.k.stamatis@gmail.com</p>
+      <p class="w-100 text-center">Mobile: +1 (916) 540 0751</p>
+      <form
+        class="w-100 text-center"
+        method="POST"
+        action="http://formspree.io/alex.k.stamatis@gmail.com"
+        id="contact-form"
+      >
+        <input type="email" name="email" placeholder="Your email" />
+        <br />
+        <textarea name="message" placeholder="Your message"></textarea>
+        <br />
+        <button type="submit" class="animated fadeInUp">SEND</button>
+      </form>
+      <p>&nbsp;</p>
     </div>
-    <p>&nbsp;</p>
-  </div>
 
-  <hr>
+    <hr />
 
-  <!-- Technologies -->
-  <div class="container">
-    <p>&nbsp;</p>
-    <div class="row w-100 justify-content-center">
-      <h2>TECHNOLOGIES</h2>
-    </div>
-    <p>&nbsp;</p>
-    <div class="row justify-content-center tech-list">
-      <ul id="tech-list">
-
-      </ul>
-    </div>
-    <p>&nbsp;</p>
-  </div>
-
-  <hr>
-
-  <!-- Contact form -->
-  <div class="container" id="contact-section">
-    <p>&nbsp;</p>
-    <h2 class="w-100 text-center">CONTACT</h2>
-    <p>&nbsp;</p>
-    <p class="w-100 text-center">Feel free to contact at me at any time for any information</p>
-    <p class="w-100 text-center">Email: alex.k.stamatis@gmail.com</p>
-    <p class="w-100 text-center">Mobile: +1 (916) 540 0751</p>
-    <form class='w-100 text-center' method="POST" action="http://formspree.io/alex.k.stamatis@gmail.com" id="contact-form">
-      <input type="email" name="email" placeholder="Your email">
-      <br>
-      <textarea name="message" placeholder="Your message"></textarea>
-      <br>
-      <button type="submit" class="animated fadeInUp">SEND</button>
-    </form>
-    <p>&nbsp;</p>
-  </div>
-
-  <hr>
-
-  <!-- Footer -->
-  <div class="container">
-    <p>&nbsp;</p>
-    <div class="row w-100" id="footer-contact-info">
-      <div class="col-sm">
-        <ul>
-          <li>
-            <img src="images/icon-location.png" class="footer-images">Sacramento, CA, United States</li>
-          <li>
-            <img src="images/icon-email.png" class="footer-images">alex.k.stamatis@gmail.com</li>
-          <li>
-            <img src="images/icon-mobile.png" class="footer-images">1 916 540 0751</li>
-        </ul>
-      </div>
-      <div class="col-sm" id="footer-site-info">
-        <ul>
-          <li>
-            <h2>About this site</h2>
-          </li>
-          <li>
-            <p>This site was created to showcase my software development abilities. The site was built using HTML, JS, CSS (SASS),
-              and BOOTSTRAP.</p>
-          </li>
-          <li>@ 2018 Alexander Stamatis</li>
-          <li>
-            <div id="social-links">
-              <a href="https://www.linkedin.com/in/alexanderstamatis/">
-                <img src="images/linkedin.png" class="social-link-img">
-              </a>
-              <a href="https://github.com/astamatis">
-                <img src="images/github.png" class="social-link-img">
-              </a>
-            </div>
-          </li>
-        </ul>
+    <!-- Footer -->
+    <div class="container">
+      <p>&nbsp;</p>
+      <div class="row w-100" id="footer-contact-info">
+        <div class="col-sm">
+          <ul>
+            <li>
+              <img
+                src="images/icon-location.png"
+                class="footer-images"
+              />Sacramento, CA, United States
+            </li>
+            <li>
+              <img
+                src="images/icon-email.png"
+                class="footer-images"
+              />alex.k.stamatis@gmail.com
+            </li>
+            <li>
+              <img src="images/icon-mobile.png" class="footer-images" />1 916
+              540 0751
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm" id="footer-site-info">
+          <ul>
+            <li>
+              <h2>About this site</h2>
+            </li>
+            <li>
+              <p>
+                This site was created to showcase my software development
+                abilities. The site was built using HTML, JS, CSS (SASS), and
+                BOOTSTRAP.
+              </p>
+            </li>
+            <li>@ 2018 Alexander Stamatis</li>
+            <li>
+              <div id="social-links">
+                <a href="https://www.linkedin.com/in/alexanderstamatis/">
+                  <img src="images/linkedin.png" class="social-link-img" />
+                </a>
+                <a href="https://github.com/astamatis">
+                  <img src="images/github.png" class="social-link-img" />
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!--JQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!--JS functionality for mobile navigation, carousel, and animate.css class implementation-->
-  <script src="js/main-min.js" type="text/javascript" defer="defer"></script>
-  <!-- Particle js -->
-  <script src="js/particles.js-master/particles.js" type="text/javascript"></script>
-
-</body>
-
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--JS functionality for mobile navigation, carousel, and animate.css class implementation-->
+    <script src="js/main-min.js" type="text/javascript" defer="defer"></script>
+    <!-- Particle js -->
+    <script
+      src="js/particles.js-master/particles.js"
+      type="text/javascript"
+    ></script>
+  </body>
 </html>

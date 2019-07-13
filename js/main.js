@@ -1,6 +1,6 @@
 var imageFolder = "images/";
 var resumeLink =
-  "https://drive.google.com/open?id=1qP4iTOXqX6FIhaA5t-BeJmOokzDKiI24";
+  "";
 var particleContainerMobileOffset = 320;
 var particleContainerDesktopOffset = 150;
 var techonologies = [
@@ -52,15 +52,15 @@ function SetMobileNavigation(enable) {
 }
 
 //mobile nav bar
-$("#mobile-menu").click(function() {
+$("#mobile-menu").click(function () {
   SetMobileNavigation(true);
 });
 
-$("#mobile-menu-active").click(function() {
+$("#mobile-menu-active").click(function () {
   SetMobileNavigation(false);
 });
 
-$(window).resize(function() {
+$(window).resize(function () {
   if ($(window).width() > 930) {
     $("#particle-container").css("top", particleContainerDesktopOffset);
     $("#nav-bar").show();
@@ -90,7 +90,7 @@ $("#sactohicoffee-image").css("visibility", "hidden");
 $("#zombie-thing-image").css("visibility", "hidden");
 
 // reveals elements when scrolling
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(this).scrollTop() > 20) {
     $("#sactohicoffee-image").css("visibility", "visible");
     $("#sactohicoffee-image").addClass("animated fadeInLeft");
@@ -130,45 +130,44 @@ $(window).scroll(function() {
 });
 
 // scroll to destination
-$("#project-link").click(function() {
-  $("html, body").animate(
-    {
+$("#project-link").click(function () {
+  $("html, body").animate({
       scrollTop: $("#sactohicoffee-image").offset().top - 190
     },
     1000
   );
 });
 
-$("#about").click(function() {
+$("#about").click(function () {
   $("html, body").animate({
-    scrollTop: $("#about-section").offset().top - 100
-  }),
+      scrollTop: $("#about-section").offset().top - 100
+    }),
     1000;
 });
 
-$("#contact").click(function() {
+$("#contact").click(function () {
   $("html, body").animate({
-    scrollTop: $("#contact-section").offset().top - 50
-  }),
+      scrollTop: $("#contact-section").offset().top - 50
+    }),
     1000;
 });
 
-$("#header-title").click(function() {
+$("#header-title").click(function () {
   console.log("hello");
   $("html, body").animate({
-    scrollTop: 0
-  }),
+      scrollTop: 0
+    }),
     1000;
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
   for (var i = 0; i < techonologies.length; i++)
     $(".tech-list ul").append("<li>" + techonologies[i] + "</li>");
 
   particlesJS.load(
     "particles-js",
     "js/particles.js-master/particles.json",
-    function() {
+    function () {
       console.log("callback - particles.js config loaded");
     }
   );
