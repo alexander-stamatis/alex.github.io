@@ -1,5 +1,8 @@
+html {
+  background-color: #E9ECEF; }
+
 body {
-  font-family: "Crimson Text", serif;
+  font-family: 'Crimson Text', serif;
   font-size: 20px;
   background: white;
   color: white; }
@@ -34,13 +37,15 @@ body {
       #nav-bar li:hover {
         background-color: #fbbe5b;
         color: #191919; } }
-#nav-bar li:hover {
+
+li:hover {
   color: black;
   border-bottom: 1px solid #fbbe5b; }
-#nav-bar ul {
+
+ul {
   padding-top: 30px; }
   @media screen and (max-width: 930px) {
-    #nav-bar ul {
+    ul {
       margin: 0 auto; } }
 
 @media screen and (max-width: 930px) {
@@ -94,7 +99,7 @@ body {
   margin: 3px 3px;
   padding: 10px;
   color: #191919;
-  background-color: #e5e5e5;
+  background-color: white;
   visibility: hidden; }
 .tech-list li:hover {
   background: #d33682;
@@ -197,9 +202,10 @@ body {
     padding-right: 15px;
     text-decoration: none;
     cursor: pointer; }
-    #resume a:hover {
-      background: #8F8F8E;
-      color: white; }
+    @media screen and (max-width: 930px) {
+      #resume a:hover {
+        background: #8F8F8E;
+        color: white; } }
 
 #zombie-thing-phone {
   object-fit: contain;

@@ -13,23 +13,18 @@ var techonologies = [
   "css3",
   "sass",
   "php",
-  "node",
-  "mongoDB",
-  "postman",
   "wordpress",
-  "atom",
   "visual studio",
   "visual studio code",
-  "brackets",
   "unity 3d",
   "windows",
-  "linux",
   "osx",
   "bash",
   "cmd",
   "git",
   "github",
-  "bitbucket"
+  "bitbucket",
+  "svn"
 ];
 var navToMobile = true;
 
