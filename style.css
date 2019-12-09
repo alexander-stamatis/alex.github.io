@@ -1,0 +1,90 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#tech-list {
+    list-style: none;
+}
+
+#tech-list li {
+    display: inline-block;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 5px;
+    color: darkslategrey;
+}
+
+#tech-list li:hover {
+    background: #dc3545;
+    color: white;
+
+}
+
+#projects img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+.icons {
+    width: 100%;
+    display: block;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+#particles canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -200;
+}
+
+a {
+    color: #dc3545;
+}
+
+a:hover {
+    color: orange;
+}
+
+.game-anchors{
+    color: black;
+    border: 0px;
+
+}
+
+.game-anchors:hover{
+    color: #dc3545;
+
+}
+
+.game-section{
+    background:#F8F9FA;
+}
+
+.game-section:hover{
+   
+    background:#1E2128;
+    color: white;
+    -webkit-box-shadow:inset 0px 0px 0px 2px #f00;
+    -moz-box-shadow:inset 0px 0px 0px 2px #f00;
+    box-shadow:inset 0px 0px 0px 2px #f00;
+
+}
+
+.font-ubuntu {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.bg-cha {
+    background: #1E2128;
+}

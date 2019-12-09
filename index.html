@@ -1,242 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="css/reset-minified.css" />
-  <link rel="stylesheet" type="text/css" href="css/base.css" />
-  <!--CDN from https://daneden.github.io/animate.css/-->
-  <link rel="stylesheet" type="text/css" href="css/animate.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=NTR" />
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lobster|Montserrat|Raleway" rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-  <title>Alexander Stamatis</title>
+    <title>Alexander Stamatis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="parallax.js-1.5.0/parallax.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <!-- Header -->
-  <nav class="navbar navbar-toggleable-md" role="navigation">
-    <div class="container">
-      <ul id="header-title">
-        <li>
-          <h1 class="color-smoke">ALEXANDER STAMATIS</h1>
-        </li>
-        <li>
-          <p class="color-smoke">Software Developer</p>
-        </li>
-      </ul>
-      <button class="mobile-menu" type="button" name="button" id="mobile-menu">
-        <img src="images/mobile-menu.png" />
-      </button>
-      <button class="mobile-menu" type="button" name="button" id="mobile-menu-active">
-        <img src="images/mobile-menu-active.png" />
-      </button>
-      <div id="nav-bar">
-        <ul>
-          <li onclick="SetMobileNavigation(false)" id="contact">CONTACT</li>
-          <li onclick="SetMobileNavigation(false)" id="about">ABOUT</li>
-          <li onclick="SetMobileNavigation(false)" id="project-link">
-            PROJECTS
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<body class="bg-cha">
+    <div style="top:50%">
 
-  <!-- Resume Link -->
-  <!-- <div class="container">
-    <div id="resume">
-      <a href="" class="resume-links">RESUME</a>
     </div>
-  </div> -->
-
-  <!-- Home Page -->
-  <div class="jumbotron bg-charchoal margin-0">
-    <div class="container">
-      <div class="row w-100" id="particle-container">
-        <div class="w-100" id="particles-js"></div>
-      </div>
-      <div class="row w-100 text-align-center" id="introduction">
-        <div class="row w-100 h-100 justify-content-center">
-          <h2 class="color-smoke">
-            My name is <span class="color-blue">Alex</span>,
-          </h2>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-cha">
+        <a class="navbar-brand" href="#" id="navName" onmouseover="expandName()" onmouseout="collapseName()"
+            style="font-family: 'Lobster', cursive;">AS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#technologies">Technologies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://drive.google.com/open?id=12xhGUujgzE-loPfnutQbKQ1zFkij90nE"
+                        target="_blank">Resume</a>
+                </li>
+            </ul>
         </div>
-        <div class="row w-100 h-100 justify-content-center">
-          <p class="color-smoke">
-            and this is my
-            <span class="color-orange">software portfolio</span>.
-          </p>
+    </nav>
+
+    <div id="particles">
+        <div id="particles-js"></div>
+    </div>
+
+    <div style="height:100vh; width:100%; background:transparent;">
+        <table style="height: 100%; width:100%;" class="text-white text-center">
+            <tbody>
+                <tr>
+                    <td class="align-middle">
+                        <h1 class="blog-post-title" style="font-family: 'Lobster', cursive;">Alexander Stamatis</h1>
+                        <hr class="bg-white w-25">
+                        <h2 class="lead font-italic">Software Engineer</h2>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="jumbotron bg-white m-0 p-4" id="projects">
+        <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative ">
+            <div class="p-4 d-flex flex-column position-static bg-light  w-100">
+                <h1 class="display-4 center text-center font-ubuntu">GAMES</h1>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Project section -->
-  <div class="jumbotron color-charchoal" id="project-section">
-    <div class="container">
-      <div class="row w-100 justify-content-center">
-        <h1>PROJECTS</h1>
-      </div>
-      <p>&nbsp;</p>
-      <a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en">
-        <img class="img-fluid w-100 zombie-thing-image" id="zombie-thing-image" src="images/zombie-thing-phone.png"
-          alt="" />
-      </a>
-      <p>&nbsp;</p>
-      <div class="row w-100 justify-content-center">
-        <h3>Zombie Thing</h3>
-      </div>
-      <div class="row w-100 justify-content-center">
-        <p class="text-summary">
-          Deployed on
-          <a href="https://play.google.com/store/apps/details?id=org.appness.zombiething&amp;hl=en">Google Play
-            Store</a>. An android mobile application developed in Unity, where the
-          player can kill zombies, earn money, purchase new weapons, and
-          repair barriers. Implemented Google Play Services and Google AdMob
-          API. Created 3D assets in Blender and Substance Painter 2.
-        </p>
-        <p class="technology-list">
-          Technologies: Unity, C#, Git, Photoshop, Google Admob, Substance
-          Painter 2, Blender
-        </p>
-      </div>
-
-
-      <hr>
-
-      <a href="http://sactohicoffee.com/">
-        <img class="img-fluid w-100 zombie-thing-image" id="sactohicoffee-image" src="images/sactohicoffee.png"
-          alt="" />
-      </a>
-      <p>&nbsp;</p>
-      <div class="row w-100 justify-content-center">
-        <h3>Hi Coffee Website</h3>
-      </div>
-      <div class="row w-100 justify-content-center">
-        <p class="text-summary">
-          <a href="http://sactohicoffee.com/">Sactohicoffee.com</a> is a site
-          created for Hi Coffee shop located in Rancho Cordova, CA. It's a
-          custom Wordpress theme site hosted on Bluehost. I went over
-          potential wireframes, changes in the electronic prototype, and
-          specific needs with Ana, the owner of Hi Coffee, and her husband
-          Ara.
-        </p>
-        <p class="technology-list">
-          Technologies: HTML5, CSS3, Bootstrap, Wordpress, PHP, phpMyAdmin
-        </p>
-      </div>
-
-    </div>
-  </div>
-
-  <!--About page -->
-  <div class="container" id="about-section">
-    <div class="row justify-content-center">
-      <h2>ALEXANDER STAMATIS</h2>
-    </div>
-    <p>&nbsp;</p>
-    <div class="row justify-content-center">
-      <div>
-        <img class="img-fluid img-m" id="img-potrait" src="images/potrait.png" alt="" />
-      </div>
-    </div>
-    <p>&nbsp;</p>
-    <div class="row">
-      <p id="about-summary">
-        I'm Alex, a software developer who works on web and game applications.
-        I'm currently learning Bootstrap, PHP, and SQL. I am also working on a
-        multiplayer FPS game. Outside of computers, I love to travel, jam on
-        the guitar, and play tabletop games with friends!
-      </p>
-    </div>
-    <p>&nbsp;</p>
-  </div>
-
-  <!-- Technologies -->
-  <div class="jumbotron color-charchoal" id="project-section" style="margin: 0;">
-    <div class="container">
-      <p>&nbsp;</p>
-      <div class="row w-100 justify-content-center">
-        <h2>TECHNOLOGIES</h2>
-      </div>
-      <p>&nbsp;</p>
-      <div class="row justify-content-center tech-list">
-        <ul id="tech-list"></ul>
-      </div>
-      <p>&nbsp;</p>
-    </div>
-  </div>
-
-  <!-- Contact form -->
-  <div class="container" id="contact-section" style="background-image: url('images/code-bg.jpg'); background-size: cover; margin: 0 auto; padding: 0; max-width: 100%; padding: 40px; "> <div style="background-color: white; max-width: 420px; margin: 0 auto; height: 100%; padding: 20px;">
-
-    <h2 class="w-100 text-center">CONTACT</h2>
-
-    <form class="w-100 text-center" method="POST" action="http://formspree.io/alex.k.stamatis@gmail.com"
-      id="contact-form" style="margin-top: 20px;">
-      <input type="email" name="email" placeholder="Your email" style="width:100%; border-radius: 2px; border-width: 2px;"/>
-      <textarea name="message" placeholder="Your message"  style="width:100%; border-radius: 2px; border-width: 2px;"></textarea>
-      <button type="submit" class="animated fadeInUp" style="margin-top: 10px; color:white;">SEND</button>
-    </form>
-  </div>
-  </div>
-
-  <div class="jumbotron color-charchoal" id="project-section">
-    <!-- Footer -->
-    <div class="container">
-      <p>&nbsp;</p>
-      <div class="row w-100" id="footer-contact-info">
-        <div class="col-sm">
-          <ul>
-            <li>
-              <img src="images/icon-location.png" class="footer-images" />Sacramento, CA, United States
-            </li>
-            <li>
-              <img src="images/icon-email.png" class="footer-images" />alex.k.stamatis@gmail.com
-            </li>
-            <li>
-              <img src="images/icon-mobile.png" class="footer-images" />1 916
-              540 0751
-            </li>
-          </ul>
+        <div class="row mb-2 ">
+            <div class="col-md-6">
+                <a class="game-anchors" target="_blank"
+                    href="https://play.google.com/store/apps/details?id=org.appness.zombiething&hl=en_US" ?>
+                    <div
+                        class="game-section row no-gutters border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">
+                        <div class=" p-4 d-flex flex-column position-static ">
+                            <strong class="d-inline-block mb-2 text-danger">Zombie Thing</strong>
+                            <p class="card-text mb-auto">An android mobile application developed in Unity, where the
+                                player can kill zombies, earn money, purchase new weapons, and
+                                repair barriers. </p>
+                        </div>
+                        <div class="example__image w-100 bg-light" style="max-height: 250px">
+                            <img class="thumbnail" src="images/zombie-thing-2.jpg" alt="image">
+                        </div>
+                    </div>
+            </div>
+            </a>
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">
+                    <div class=" p-4 d-flex flex-column position-static bg-light">
+                        <strong class="d-inline-block mb-2 text-danger">Starfighter</strong>
+                        <p class="card-text mb-auto">An android mobile application developed in Unity, where the
+                            player can kill zombies, earn money, purchase new weapons, and
+                            repair barriers. </p>
+                    </div>
+                    <div class="example__image w-100 bg-light" style="max-height: 250px">
+                        <img class="thumbnail" src="images/starfighter-2.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm" id="footer-site-info">
-          <ul>
-            <li>
-              <h2>About this site</h2>
-            </li>
-            <li>
-              <p>
-                This site was created to showcase my software development
-                abilities. The site was built using HTML, JS, CSS (SASS), and
-                BOOTSTRAP.
-              </p>
-            </li>
-            <li>@ 2018 Alexander Stamatis</li>
-            <li>
-              <div id="social-links">
-                <a href="https://www.linkedin.com/in/alexanderstamatis/">
-                  <img src="images/linkedin.png" class="social-link-img" />
-                </a>
-                <a href="https://github.com/astamatis">
-                  <img src="images/github.png" class="social-link-img" />
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!--JQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!--JS functionality for mobile navigation, carousel, and animate.css class implementation-->
-  <script src="js/main-min.js" type="text/javascript" defer="defer"></script>
-  <!-- Particle js -->
-  <script src="js/particles.js-master/particles.js" type="text/javascript"></script>
+    <div class="text-white m-0 p-5" id="technologies">
+        <h1 class="display-4 center text-center font-ubuntu">Technologies</h1>
+        <div class="row justify-content-center tech-list">
+            <ul id="tech-list" class="w-75 text-center pt-5">
+                <li>C#</li>
+                <li>C++</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Visual Studio</li>
+                <li>Visual Code</li>
+                <li>Subversion</li>
+                <li>Github</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="jumbotron bg-white m-0 p-4" id="about">
+        <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative ">
+            <div class="p-4 d-flex flex-column position-static bg-light  w-100">
+                <h1 class="display-4 center text-center font-ubuntu">About Me</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" style="overflow: hidden; max-height: 400px;">
+                <img src="images/full-profile.jpg" width="100%" class="img-thumbnail" alt="Capri, Italy">
+            </div>
+
+            <div class="col-md-8">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">
+                    <div class=" p-4 d-flex flex-column position-static bg-light">
+                        <p>
+                            I have roughly 2 years of professional experience in C#, C++, and HTML, CSS, Javascript.
+                            Majority of years spent in C# .NET Framework to maintain and develop automated
+                            processes. Unit and integration tests made sure to limit external errors that hindered the
+                            business reputation.
+                        </p>
+                        <p>
+                            Outside of work, I typically work on video games using Unity with C#, Blender,
+                            Substance Painter, and
+                            Photoshop. I also try to devote some of my time in strengthening data structures and
+                            algorithm
+                            foundations and researching new emerging technologies. When I am not near a computer, I love
+                            to travel, play tabletop games with friends, and jam
+                            on the
+                            guitar or piano.
+                        </p>
+                        <p>Languages: English, Greek</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/code-background.jpg" id="contact"
+        style="z-index: 1;">
+        <div class="col-md-5  mx-auto p-5">
+            <div class="bg-light p-4">
+                <h1 class="display-4 font-ubuntu">Reach Out</h1>
+                <form class="w-100 text-center" method="POST" action="https://formspree.io/alex.k.stamatis@gmail.com"
+                    id="contact-form" style="margin-top: 20px;">
+                    <input class="mt-4 p-2" type="email" name="email" placeholder="Your email"
+                        style="width:100%; border-radius: 2px; border-width: 2px;" />
+                    <textarea class="mt-4 p-2" name="message" placeholder="Your message"
+                        style="width:100%; border-radius: 2px; border-width: 2px;"></textarea>
+                    <button type="submit" class="btn btn-dark mt-4">SEND</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-white p-5 .text-danger" id="footer">
+        <div class="container mt-5 mb-5">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Alexander Stamatis @ 2019</p>
+            <p>Check out my <a href="https://drive.google.com/open?id=12xhGUujgzE-loPfnutQbKQ1zFkij90nE"
+                    target="_blank">resume</a>!
+                Website created with <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, <a
+                    href="http://pixelcog.com/parallax.js/" target="_blank">ParallaxJS</a>, and <a
+                    href="https://vincentgarreau.com/particles.js/" target="_blank">ParticleJS</a>.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
 </body>
+
+<footer>
+
+    <script>
+        particlesJS.load('particles-js', 'particles.js-master/particlesjs-config.json', function () {
+            console.log('callback - particles.js config loaded');
+        })
+    </script>
+    <script>
+        let name = document.getElementById('navName');
+
+        function collapseName() {
+            name.textContent = "AS";
+        }
+
+        function expandName() {
+            name.textContent = "Alexander Stamatis";
+        }
+    </script>
+</footer>
 
 </html>

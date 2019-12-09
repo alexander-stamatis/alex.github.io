@@ -1,23 +1,27 @@
  @import "vars";
 
-html{
-    background-color: #E9ECEF;
-}
+ html {
+     background-color: #E9ECEF;
+ }
 
  body {
 
      font-family: 'Crimson Text', serif;
      font-size: 20px;
-     background: white;
      color: white;
  }
 
  #navbar-fixed {
      visibility: hidden;
-     background: RGBA(255, 255, 255, .8);
+     background: $smoke;
  }
 
+.navbar{
+    background: $charchoal;
+}
+
  #nav-bar {
+
      @media screen and (max-width: $md) {
          display: none;
          width: 100%;
@@ -35,7 +39,7 @@ html{
          cursor: pointer;
          padding: 4px 4px;
          font-size: 16px;
-         color: #7c7a7a;
+         color:white;
 
          @media screen and (max-width: $md) {
              width: 99%;
@@ -46,8 +50,8 @@ html{
              font-size: 20px;
 
              &:hover {
-                 background-color: $brightOrange;
-                 color: $charchoal;
+                 background-color: $magenta;
+                 color: white;
              }
          }
      }
@@ -55,13 +59,11 @@ html{
 
  li:hover {
 
-     color: black;
-     border-bottom: 1px solid $brightOrange;
+     color: white;
+     border-bottom: 1px solid $magenta;
  }
 
  ul {
-     padding-top: 30px;
-
      @media screen and (max-width: $md) {
          margin: 0 auto;
      }
@@ -137,8 +139,7 @@ html{
  .tech-list {
 
      ul {
-
-         max-width: 400px;
+         max-width: 700px;
          margin: 0 auto;
          text-align: center;
      }
@@ -155,7 +156,6 @@ html{
      }
 
      li:hover {
-
          background: $magenta;
          color: white;
      }
@@ -359,7 +359,8 @@ html{
  #header-title {
      margin-bottom: 0;
      cursor: pointer;
-
+     padding-top: 0;
+     color:white;
      h1 {
          font-size: 20px;
          margin-bottom: 0;
@@ -396,27 +397,32 @@ html{
  }
 
  .color-orange {
-
      color: $brightOrange !important;
  }
 
  .color-smoke {
-
      color: $smoke !important;
  }
 
  .color-charchoal {
-
      color: $charchoal !important;
  }
 
  .bg-charchoal {
-
      background: $charchoal !important;
  }
 
- .bg-smoke {
+ .bg-charchoal-a {
+    background: #ababab !important;
+}
 
+ .bg-smoke {
      background: $smoke !important;
  }
 
+ #cover-bg{
+    //  background: url("images\");
+    background: url("images/cover-bg.jpg");
+    background-size: cover;
+    background-size: 100px;
+ }

@@ -101,10 +101,10 @@ $(window).scroll(function () {
 
   if ($(this).scrollTop() > 50) {
     $(".navbar").addClass("fixed-top");
-    $(".navbar").css("background", "RGBA(255,255,255,.9)");
+    // $(".navbar").css("background", "RGBA(255,255,255,.9)");
   } else {
     $(".navbar").removeClass("fixed-top");
-    $(".navbar").css("background", "RGBA(255,255,255,1)");
+    // $(".navbar").css("background", "RGBA(255,255,255,1)");
   }
 
   if (
