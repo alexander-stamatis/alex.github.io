@@ -15,6 +15,7 @@ body {
     border-radius: 10px;
     margin: 5px;
     color: darkslategrey;
+    margin-top:15px;
 }
 
 #tech-list li:hover {
